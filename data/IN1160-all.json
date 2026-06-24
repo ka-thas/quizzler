@@ -1,0 +1,20 @@
+{
+    "title": "IN1160 ML 🐒",
+    "description": "Alle flashcards fra IN1160-pensum",
+    "credit": "Ka",
+    "combine": [
+        "uke02-trekkvektorer",
+        "uke03-veiledet-klassifikasjon",
+        "uke04-ikke-veiledet-klyngeanalyse",
+        "uke05-linear-regresjon",
+        "uke06-logistisk-regresjon",
+        "uke07-nevrale-nettverk",
+        "uke09-beslutningstrar",
+        "uke10-ml-i-praksis",
+        "uke11-reinforcement-learning",
+        "uke12-generativ-ki",
+        "uke13-filosofi",
+        "uke14-etikk"
+    ],
+    "questions": []
+}

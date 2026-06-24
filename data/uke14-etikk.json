@@ -1,0 +1,127 @@
+{
+    "title": "Uke 14 Etikk ⚖️",
+    "description": "Etiske utfordringer ved kunstig intelligens",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "KI-etikk",
+            "a": "Fagfeltet som vurderer hvordan KI bør utvikles og brukes for å unngå skade og fremme rettferdige, ansvarlige systemer."
+        },
+        {
+            "q": "Skjevhet (bias) i data",
+            "a": "Når treningsdata gjenspeiler historiske eller skjeve mønstre, lærer modellen dem og kan videreføre eller forsterke urettferdighet."
+        },
+        {
+            "q": "Rettferdighet (fairness)",
+            "a": "At en modell behandler individer og grupper rettferdig. Det finnes flere, til dels motstridende, matematiske definisjoner av rettferdighet."
+        },
+        {
+            "q": "Diskriminering",
+            "a": "Når et KI-system systematisk gir dårligere utfall for bestemte grupper, f.eks. basert på kjønn, etnisitet eller alder."
+        },
+        {
+            "q": "Personvern og GDPR",
+            "a": "KI bruker ofte personopplysninger. GDPR setter krav om samtykke, formålsbegrensning og rettigheter som innsyn og sletting."
+        },
+        {
+            "q": "Black box-problemet",
+            "a": "Mange modeller (særlig dype nett) er vanskelige å forstå innvendig, noe som gjør det krevende å forklare og etterprøve beslutningene."
+        },
+        {
+            "q": "Transparens og forklarbarhet",
+            "a": "At det er mulig å forstå og forklare hvordan og hvorfor et system tar sine beslutninger. Viktig for tillit og kontroll."
+        },
+        {
+            "q": "Ansvar (accountability)",
+            "a": "Hvem som holdes ansvarlig når et KI-system gjør feil? Utvikler, eier eller bruker? Et uavklart, men sentralt spørsmål."
+        },
+        {
+            "q": "Desinformasjon og deepfakes",
+            "a": "Generativ KI kan lage overbevisende falskt innhold (tekst, bilder, video) som kan brukes til å villede og manipulere."
+        },
+        {
+            "q": "Samfunnspåvirkning",
+            "a": "KI påvirker arbeidsmarked, maktkonsentrasjon og autonome systemer (f.eks. våpen), og reiser brede spørsmål om regulering og kontroll."
+        },
+        {
+            "q": "Etisk vs. lovlig",
+            "a": "Etisk og lovlig er ikke det samme. Handlinger kan være lovlige men uetiske, og lover bør være etiske men er ikke alltid det."
+        },
+        {
+            "q": "Konsekvensetikk (utilitarisme)",
+            "a": "Etisk retning der konsekvenser og resultater er viktigst. For KI: bruk bør maksimere samfunnsnytte og minimere skade. Utfordring: vanskelig å forutse alle konsekvenser."
+        },
+        {
+            "q": "Deontologisk etikk (pliktbasert)",
+            "a": "Etisk retning der regler, plikter og rettigheter står sentralt, uavhengig av konsekvens. For KI: respektere menneskeverd, privatliv og autonomi. Utfordring: regler kan komme i konflikt."
+        },
+        {
+            "q": "Dydsetikk",
+            "a": "Etisk retning med fokus på moralsk karakter og holdninger hos den som handler. For KI: hva ville en god KI-utvikler gjort? Utfordring: subjektive dyder, vanskelig å implementere algoritmisk."
+        },
+        {
+            "q": "Sporvognsproblemet (trolley problem)",
+            "a": "Klassisk etisk dilemma om man bør gripe inn for å redde flere liv på bekostning av færre. Tilpasses autonome kjøretøy i Moral Machine-prosjektet."
+        },
+        {
+            "q": "Hvor kommer skjevheter fra?",
+            "a": "Verden (historiske skjevheter), data (representasjonsskjevheter), modeller (aggregeringsskjevheter) og evaluering (evalueringsskjevheter)."
+        },
+        {
+            "q": "Representativitet i treningsdata",
+            "a": "Visse grupper (f.eks. unge, hvite menn fra USA) er overrepresentert på nettet, mens minoriteter og kvinner er underrepresentert. Dette gir dårligere ytelse og teknologisk ekskludering for de underrepresenterte."
+        },
+        {
+            "q": "Språklig representasjon",
+            "a": "Kun en liten andel av verdens ~7000 språk er inkludert i treningsdata. Mindre språk som norsk får dårligere ytelse, og mange språk er ikke representert i det hele tatt."
+        },
+        {
+            "q": "Avlæring (unlearning)",
+            "a": "En mulig løsning på personvern: å få en modell til å \"glemme\" bestemte data den er trent på, f.eks. sensitiv personinformasjon."
+        },
+        {
+            "q": "Debiasing",
+            "a": "Teknikker for å fjerne skjevheter: pre-prosessering (endre data/input), under trening (tapsfunksjon, pruning), under inferens (endre utdatadistribusjon) og post-prosessering (modereringslag)."
+        },
+        {
+            "q": "Alignment (LLM post-trening)",
+            "a": "Å justere modellens utdata til menneskelige preferanser ved hjelp av menneskelige tilbakemeldinger. Reiser etiske spørsmål rundt bruk av billig arbeidskraft i lavlønnsland."
+        },
+        {
+            "q": "Filterboble",
+            "a": "Personalisering anbefaler innhold som ligner det du allerede har sett. Resultatet er at brukere får mindre kunnskap om ulike perspektiver."
+        },
+        {
+            "q": "Hallusinering",
+            "a": "Usann informasjon i utdata fra en LLM. Modeller trenes til å gi overbevisende svar uten kobling til verden eller begrep om sannhet. Kan motvirkes med bedre data og RAG."
+        },
+        {
+            "q": "Sykofanti (sycophancy)",
+            "a": "Overdreven enighet, smisking og skryt fra språkmodeller. Problematisk fordi feilaktige ytringer ikke korrigeres, og modellen kan opprettholde villfarelser eller støtte skadelige handlinger."
+        },
+        {
+            "q": "Dobbel bruk (dual use)",
+            "a": "Teknologi som kan brukes til både fredelige og militære/skadelige formål, f.eks. kjernekraft eller KI til overvåking, autonome våpen og desinformasjon."
+        },
+        {
+            "q": "Moral Machine",
+            "a": "Nettplattform som samler etiske vurderinger fra hele verden via sporvognsproblemet tilpasset autonome kjøretøy. Funn: ingen universelle moralske regler, men mønstre som å redde flere og redde unge framfor gamle."
+        },
+        {
+            "q": "Miljøkostnad ved KI",
+            "a": "Trening av store språkmodeller er svært ressurskrevende (GPUer, strøm, datasentre) og gir et betydelig karbonavtrykk. Inferens står for ~90% av energiforbruket i mange modellers livssyklus."
+        },
+        {
+            "q": "Energieffektive metoder",
+            "a": "Tiltak for å redusere energibruk: kvalitet framfor kvantitet i data, mer effektive arkitekturer, mindre modeller (distillering, kvantisering), energieffektive datasentre og gjenbruk av åpne modeller."
+        },
+        {
+            "q": "Datakort og modellkort",
+            "a": "Dokumentasjon av henholdsvis datasett og modeller. Et viktig transparenstiltak ved ansvarlig utvikling som beskriver innhold, bruk og begrensninger."
+        },
+        {
+            "q": "EUs KI-forordning (AI Act)",
+            "a": "Risikobasert rammeverk for å regulere KI-bruk i EU med ulike forpliktelser etter kategori. Høyrisikosystemer krever dokumentasjon, datakvalitet, nøyaktighet, sikkerhet, loggføring og klare brukerinstruksjoner."
+        }
+    ]
+}

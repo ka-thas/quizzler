@@ -1,0 +1,475 @@
+{
+    "title": "IN2140 OS 💾",
+    "description": "Flashcards med OS begreper",
+    "credit": "",
+    "questions": [
+        {
+            "q": "CPU",
+            "a": "Central Processing Unit - The primary component of a computer that performs most of the processing"
+        },
+        {
+            "q": "ALU",
+            "a": "Arithmetic Logic Unit - Performs arithmetic and logical operations"
+        },
+        {
+            "q": "RAM",
+            "a": "Random Access Memory - Volatile memory used for temporary data storage"
+        },
+        {
+            "q": "ROM",
+            "a": "Read Only Memory - Non-volatile memory that retains data when powered off"
+        },
+        {
+            "q": "Cache",
+            "a": "Fast memory that sits between main memory and CPU to speed up data access"
+        },
+        {
+            "q": "Shared memory",
+            "a": "A memory space accessible by multiple processes for communication"
+        },
+        {
+            "q": "Message passing",
+            "a": "Communication between processes through sending and receiving messages"
+        },
+        {
+            "q": "Pipes",
+            "a": "A unidirectional communication channel between processes"
+        },
+        {
+            "q": "Named pipes",
+            "a": "Pipes with a specific name that exist in the filesystem and allow unrelated processes to communicate"
+        },
+        {
+            "q": "Sockets",
+            "a": "Endpoints for communication between processes over a network"
+        },
+        {
+            "q": "Signals",
+            "a": "Asynchronous notifications sent to a process to notify it of events"
+        },
+        {
+            "q": "Semaphores",
+            "a": "Synchronization tools used to control access to shared resources"
+        },
+        {
+            "q": "Mutex",
+            "a": "Mutual Exclusion - A lock that allows only one thread to access a resource at a time"
+        },
+        {
+            "q": "Monitor",
+            "a": "A high-level synchronization construct that manages access to shared resources"
+        },
+        {
+            "q": "RPC (Remote Procedure Call)",
+            "a": "Procedure call where the executing code runs on another address space (often a remote server)"
+        },
+        {
+            "q": "Deadlock",
+            "a": "A situation where two or more processes are waiting indefinitely for each other to release resources"
+        },
+        {
+            "q": "Race condition",
+            "a": "A behavior where the system's outcome depends on the sequence or timing of uncontrollable events"
+        },
+        {
+            "q": "Synchronization",
+            "a": "Coordination of concurrent processes to ensure correct results"
+        },
+        {
+            "q": "Producer-consumer",
+            "a": "A classic problem where producers create data and consumers use it, requiring synchronization"
+        },
+        {
+            "q": "Reader-writer problem",
+            "a": "A synchronization issue where readers and writers must access shared data without conflicts"
+        },
+        {
+            "q": "Mailbox",
+            "a": "A message queue used for communication between processes"
+        },
+        {
+            "q": "Event queue",
+            "a": "A queue that holds events for a program to process asynchronously"
+        },
+        {
+            "q": "Condition variable",
+            "a": "A synchronization primitive that allows threads to wait for certain conditions to be met"
+        },
+        {
+            "q": "Process",
+            "a": "An instance of a running program"
+        },
+        {
+            "q": "Thread",
+            "a": "A type of lightweight process that does not get its own address space."
+        },
+        {
+            "q": "Context switch",
+            "a": "The process of storing and restoring the state of a CPU so that multiple processes can share a single CPU"
+        },
+        {
+            "q": "Process table",
+            "a": "A data structure maintained by the OS to keep track of all processes"
+        },
+        {
+            "q": "PCB (Process Control Block)",
+            "a": "A data structure that stores information about a specific process"
+        },
+        {
+            "q": "TCB (Thread Control Block)",
+            "a": "A data structure that stores information about a specific thread"
+        },
+        {
+            "q": "Fork",
+            "a": "A system call to create a new process by duplicating an existing one"
+        },
+        {
+            "q": "Exec",
+            "a": "A system call to replace the current process image with a new process image"
+        },
+        {
+            "q": "Parent process",
+            "a": "A process that creates one or more child processes"
+        },
+        {
+            "q": "Child process",
+            "a": "A process created by another (parent) process"
+        },
+        {
+            "q": "Zombie process",
+            "a": "A process that has completed but still has an entry in the process table"
+        },
+        {
+            "q": "Orphan process",
+            "a": "A child process whose parent has terminated"
+        },
+        {
+            "q": "Multithreading",
+            "a": "Running multiple threads within a single process"
+        },
+        {
+            "q": "Multitasking",
+            "a": "Running multiple processes seemingly simultaneously"
+        },
+        {
+            "q": "Time slicing",
+            "a": "Dividing CPU time into slices for multiple processes"
+        },
+        {
+            "q": "Scheduler",
+            "a": "The part of the OS that decides which process runs next"
+        },
+        {
+            "q": "Preemptive scheduling",
+            "a": "The OS forcibly removes a running process to run another"
+        },
+        {
+            "q": "Round-robin",
+            "a": "A scheduling algorithm where each process gets an equal share of CPU time"
+        },
+        {
+            "q": "Priority scheduling",
+            "a": "Scheduling processes based on priority"
+        },
+        {
+            "q": "Real-time process",
+            "a": "A process that must complete within strict timing constraints"
+        },
+        {
+            "q": "Virtual memory",
+            "a": "An abstraction that provides the illusion of a very large memory"
+        },
+        {
+            "q": "Physical memory",
+            "a": "The actual RAM installed in the computer"
+        },
+        {
+            "q": "Paging",
+            "a": "Dividing memory into fixed-size pages to manage memory efficiently"
+        },
+        {
+            "q": "Segmentation",
+            "a": "Dividing memory into variable-sized segments based on logical divisions"
+        },
+        {
+            "q": "MMU (Memory Management Unit)",
+            "a": "Hardware that handles virtual to physical address translation"
+        },
+        {
+            "q": "Page fault",
+            "a": "An event that occurs when a program accesses a page not currently in memory"
+        },
+        {
+            "q": "TLB (Translation Lookaside Buffer)",
+            "a": "A cache that stores recent address translations"
+        },
+        {
+            "q": "Page table",
+            "a": "A data structure used to store the mapping between virtual addresses and physical addresses"
+        },
+        {
+            "q": "Swapping",
+            "a": "Moving entire processes between disk and memory"
+        },
+        {
+            "q": "Thrashing",
+            "a": "Excessive paging causing system slowdown"
+        },
+        {
+            "q": "Stack",
+            "a": "A memory region for function calls and local variables"
+        },
+        {
+            "q": "Heap",
+            "a": "A memory region for dynamically allocated memory"
+        },
+        {
+            "q": "Frame (in memory)",
+            "a": "A fixed-size block of physical memory used in paging"
+        },
+        {
+            "q": "Segment table",
+            "a": "Table used in segmentation to store segment information"
+        },
+        {
+            "q": "Address space",
+            "a": "The range of memory addresses that a process can use"
+        },
+        {
+            "q": "Logical address",
+            "a": "A virtual address"
+        },
+        {
+            "q": "Physical address",
+            "a": "The actual address in physical memory"
+        },
+        {
+            "q": "Fragmentation",
+            "a": "Wasted memory caused by unused space between or within memory allocations"
+        },
+        {
+            "q": "Memory protection",
+            "a": "Techniques to prevent processes from interfering with each other's memory"
+        },
+        {
+            "q": "Demand paging",
+            "a": "Loading pages into memory only when they are needed"
+        },
+        {
+            "q": "File system",
+            "a": "A way to organize and store files on storage devices"
+        },
+        {
+            "q": "FAT (File Allocation Table)",
+            "a": "A simple file system used in older and simpler storage devices"
+        },
+        {
+            "q": "NTFS (New Technology File System)",
+            "a": "A modern file system used by Windows with advanced features"
+        },
+        {
+            "q": "Inode",
+            "a": "A data structure used to represent a file in UNIX-based systems"
+        },
+        {
+            "q": "Disk scheduling",
+            "a": "Algorithms to decide the order of servicing disk I/O requests"
+        },
+        {
+            "q": "Seek time",
+            "a": "Time taken by the disk arm to move to the track where data is stored"
+        },
+        {
+            "q": "Latency",
+            "a": "Delay before data transfer begins following an instruction"
+        },
+        {
+            "q": "Block device",
+            "a": "A device that stores data in fixed-size blocks"
+        },
+        {
+            "q": "Character device",
+            "a": "A device that handles data as a stream of bytes"
+        },
+        {
+            "q": "SSD (Solid State Drive)",
+            "a": "A fast storage device using flash memory"
+        },
+        {
+            "q": "HDD (Hard Disk Drive)",
+            "a": "A traditional storage device using spinning disks"
+        },
+        {
+            "q": "RAID",
+            "a": "Redundant Array of Independent Disks - A way to store data across multiple disks for redundancy/performance"
+        },
+        {
+            "q": "File descriptor",
+            "a": "An integer that uniquely identifies an open file in a process"
+        },
+        {
+            "q": "Swap space",
+            "a": "Disk space used as an extension of RAM"
+        },
+        {
+            "q": "Kernel",
+            "a": "The core of the OS managing system resources"
+        },
+        {
+            "q": "Microkernel",
+            "a": "A minimalist kernel architecture providing only essential services"
+        },
+        {
+            "q": "Monolithic kernel",
+            "a": "A single large process running entirely in a single address space"
+        },
+        {
+            "q": "User mode",
+            "a": "A restricted mode where applications run"
+        },
+        {
+            "q": "Kernel mode",
+            "a": "A privileged mode where the OS runs"
+        },
+        {
+            "q": "Bootloader",
+            "a": "Software that loads the OS when a computer starts"
+        },
+        {
+            "q": "Init system",
+            "a": "The first process started during booting to initialize the system"
+        },
+        {
+            "q": "System call",
+            "a": "A programmatic way for a user program to request service from the OS"
+        },
+        {
+            "q": "Daemon",
+            "a": "A background process that runs without user interaction"
+        },
+        {
+            "q": "Interrupt",
+            "a": "A signal to the CPU to indicate an event needs immediate attention"
+        },
+        {
+            "q": "Trap",
+            "a": "A software-generated interrupt caused by an error or a specific request"
+        },
+        {
+            "q": "Device driver",
+            "a": "Software that controls a hardware device"
+        },
+        {
+            "q": "Load balancing",
+            "a": "Distributing work evenly across resources"
+        },
+        {
+            "q": "Process state",
+            "a": "Current status of a process (e.g., running, waiting)"
+        },
+        {
+            "q": "Scheduling (ready) queue",
+            "a": "Queue where processes wait for CPU time"
+        },
+        {
+            "q": "Resource allocation",
+            "a": "Assigning available resources to tasks"
+        },
+        {
+            "q": "First-Come, First-Served (FCFS)",
+            "a": "Scheduling the process that arrives first"
+        },
+        {
+            "q": "Shortest Job Next (SJN) / Shortest Job First (SJF)",
+            "a": "Scheduling the process with the shortest execution time next"
+        },
+        {
+            "q": "Shortest Remaining Time First (SRTF)",
+            "a": "Preemptive version of SJF, selecting the process with the shortest remaining time"
+        },
+        {
+            "q": "Round Robin (RR)",
+            "a": "Assigns a fixed time unit per process in rotation"
+        },
+        {
+            "q": "Priority Scheduling (Preemptive & Non-preemptive)",
+            "a": "Scheduling based on priority, optionally preempting lower priority processes"
+        },
+        {
+            "q": "Multilevel Queue Scheduling",
+            "a": "Multiple queues with different priority levels"
+        },
+        {
+            "q": "Lottery Scheduling",
+            "a": "Processes are given lottery tickets for CPU time allocation"
+        },
+        {
+            "q": "Earliest Deadline First (EDF)",
+            "a": "Schedules tasks based on earliest deadlines"
+        },
+        {
+            "q": "Shortest Seek Time First (SSTF)",
+            "a": "Services the disk I/O request closest to the current head position"
+        },
+        {
+            "q": "SCAN (Elevator Algorithm)",
+            "a": "Moves head back and forth across the disc from end to end, servicing requests as it passes over where they are located."
+        },
+        {
+            "q": "C-SCAN (Circular SCAN)",
+            "a": "Disk arm services requests in one direction and jumps back to start"
+        },
+        {
+            "q": "LOOK",
+            "a": "SCAN but reverses direction immediately when no more requests exist in current direction"
+        },
+        {
+            "q": "C-LOOK",
+            "a": "C-SCAN but only goes as far as the last request before jumping"
+        },
+        {
+            "q": "N-Step SCAN",
+            "a": "SCAN that divides requests into sub-queues for better service"
+        },
+        {
+            "q": "FSCAN",
+            "a": "Modified SCAN using two queues to improve performance"
+        },
+        {
+            "q": "First-In, First-Out (FIFO)",
+            "a": "Replaces the oldest page in memory"
+        },
+        {
+            "q": "Least Recently Used (LRU)",
+            "a": "Replaces the page that has not been used for the longest time"
+        },
+        {
+            "q": "Least Frequently Used (LFU)",
+            "a": "Replaces the page used least often"
+        },
+        {
+            "q": "Clock Algorithm",
+            "a": "Approximation of LRU using a circular buffer"
+        },
+        {
+            "q": "Second Chance",
+            "a": "A Clock variant giving pages a second chance before replacement"
+        },
+        {
+            "q": "Enhanced Second Chance",
+            "a": "Improved Clock algorithm using reference and modification bits"
+        },
+        {
+            "q": "Random Replacement (RR)",
+            "a": "Randomly replaces a page in memory when a page frame is needed"
+        },
+        {
+            "q": "Not Recently Used (NRU)",
+            "a": "Replaces pages based on referenced and modified bits"
+        },
+        {
+            "q": "Aging Algorithm",
+            "a": "Keeps track of page usage over time to approximate LRU"
+        }
+    ]
+}

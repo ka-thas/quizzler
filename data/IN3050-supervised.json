@@ -1,0 +1,107 @@
+{
+    "title": "IN3050 Supervised 🧠",
+    "description": "Flashcards med supervised begreper",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Labeled data",
+            "a": "Data where each example is paired with an output label, used to train supervised models"
+        },
+        {
+            "q": "Training set",
+            "a": "Subset of labeled data used to train a model"
+        },
+        {
+            "q": "Test set",
+            "a": "Subset of labeled data used to evaluate a model’s performance"
+        },
+        {
+            "q": "Validation set",
+            "a": "Subset of data used to fine-tune model hyperparameters during training"
+        },
+        {
+            "q": "Generalization",
+            "a": "Model’s ability to perform well on unseen data"
+        },
+        {
+            "q": "Underfitting",
+            "a": "Model is too simple to capture the underlying patterns in the data"
+        },
+        {
+            "q": "Overfitting",
+            "a": "Model is too complex and captures noise in the training data"
+        },
+        {
+            "q": "Cross-validation",
+            "a": "Technique for assessing model performance by training and testing on different data splits"
+        },
+        {
+            "q": "Decision boundary",
+            "a": "The surface that separates different predicted classes in the input space"
+        },
+        {
+            "q": "Linear Regression",
+            "a": "Predicts a continuous output using a linear relationship between input features"
+        },
+        {
+            "q": "Logistic Regression",
+            "a": "Predicts probabilities for binary classification using the logistic function"
+        },
+        {
+            "q": "Decision Trees",
+            "a": "Tree-structured models that split data based on feature values to make predictions"
+        },
+        {
+            "q": "Support Vector Machines (SVM)",
+            "a": "Classifier that finds the optimal hyperplane separating different classes"
+        },
+        {
+            "q": "k-Nearest Neighbors (k-NN)",
+            "a": "Classifies instances based on the most common label among the nearest neighbors"
+        },
+        {
+            "q": "Accuracy",
+            "a": "Proportion of correct predictions out of total predictions made"
+        },
+        {
+            "q": "Precision",
+            "a": "Proportion of true positives out of all predicted positives"
+        },
+        {
+            "q": "Recall",
+            "a": "Proportion of true positives out of all actual positives"
+        },
+        {
+            "q": "F1-score",
+            "a": "Harmonic mean of precision and recall; balances both in one metric"
+        },
+        {
+            "q": "Confusion matrix",
+            "a": "Matrix that shows the counts of true positives, false positives, true negatives, and false negatives"
+        },
+        {
+            "q": "Covariance matrix",
+            "a": "Matrix capturing the covariances between each pair of features"
+        },
+        {
+            "q": "Loss functions",
+            "a": "Functions used to measure the error between predicted and actual values"
+        },
+        {
+            "q": "MSE",
+            "a": "Mean Squared Error - Average of squared differences between predictions and actual values"
+        },
+        {
+            "q": "Cross-Entropy Loss",
+            "a": "Loss function that penalizes incorrect, confident predictions. Effective for classification tasks"
+        },
+        {
+            "q": "Binary Cross-Entropy",
+            "a": "L = -[y * log(p) + (1 - y) * log(1 - p)] — used for binary classification"
+        },
+        {
+            "q": "Multiclass Cross-Entropy",
+            "a": "L = -sum over classes of (y_i * log(p_i)) — used for multiclass classification"
+        }
+    ]
+}

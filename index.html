@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+    <head>
+        <title>Quiz</title>
+        <script>
+            // Apply saved/preferred theme before first paint to avoid a flash.
+            (function () {
+                const t = localStorage.getItem("theme")
+                    || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                document.documentElement.setAttribute("data-theme", t);
+            })();
+        </script>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="icon" href="../seedling.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <meta charset="UTF-8" />
+
+        <!-- PWA / offline / iOS fullscreen landscape web app -->
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Quiz" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    </head>
+
+    <body>
+        <!-- Page 1: settings -->
+        <main id="settings">
+            <button id="theme-toggle" class="menu-button" aria-label="Toggle dark mode"><i data-lucide="moon"></i></button>
+            <h1 class="gradient-text">Quizzler</h1>
+
+            <div class="settings-group">
+                <span class="settings-label">Themes</span>
+                <div id="theme-pills"></div>
+                <p class="settings-hint" id="theme-hint">Select one or more themes to include.</p>
+            </div>
+
+            <div class="settings-group">
+                <span class="settings-label">Display for participants</span>
+                <button id="participant-toggle" class="pill-toggle" role="switch" aria-checked="false">
+                    <span class="pill-on">On</span><span class="pill-off">Off</span>
+                </button>
+                <p class="settings-hint" id="participant-hint">Off — compact host view, answers visible.</p>
+            </div>
+
+            <div class="settings-group">
+                <span class="settings-label">Shuffle questions</span>
+                <button id="shuffle-toggle" class="pill-toggle" role="switch" aria-checked="false">
+                    <span class="pill-on">On</span><span class="pill-off">Off</span>
+                </button>
+                <p class="settings-hint" id="shuffle-hint">Off — questions appear in their original order.</p>
+            </div>
+
+            <button id="start-quiz" class="primary-button">Start quiz</button>
+        </main>
+
+        <!-- Page 2: quiz — one question at a time, presentation style -->
+        <main id="quiz">
+            <div id="quiz-header">
+                <button id="back-to-settings" class="menu-button" aria-label="Back to settings"><i data-lucide="arrow-left"></i></button>
+                <h1 id="quiz-title"></h1>
+                <span id="progress">0 / 0</span>
+            </div>
+
+            <!-- The slide. Tap to reveal/hide the answer. -->
+            <div id="slide">
+                <span id="slide-number"></span>
+                <p id="slide-question"></p>
+                <p id="slide-answer"></p>
+                <span id="reveal-hint">Tap to reveal answer</span>
+            </div>
+
+            <div id="quiz-controls">
+                <button id="prev" class="menu-button" aria-label="Previous question"><i data-lucide="chevron-left"></i></button>
+                <button id="reveal" class="primary-button">Show answer</button>
+                <button id="next" class="menu-button" aria-label="Next question"><i data-lucide="chevron-right"></i></button>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+        <script>lucide.createIcons();</script>
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => navigator.serviceWorker.register("sw.js"));
+            }
+        </script>
+    </body>
+</html>

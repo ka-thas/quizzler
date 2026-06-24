@@ -1,0 +1,26 @@
+{
+    "title": "Quiz",
+    "description": "",
+    "credit": "",
+    "questions": [
+        {
+            "q": "Etymologisk sett. Hvor kommer oktober fra?",
+            "a": "Latinsk octo betyr åtte"
+        },
+        {
+            "q": "Er det gresskar i pumpkin spice"
+        },
+        {
+            "q": "Hvilke farger er i OL ringene og i hvilken rekkefølge",
+            "a": "Blå gul sort grønn rød"
+        },
+        {
+            "q": "what’s 9+10",
+            "a": "21"
+        },
+        {
+            "q": "Hva kalles et ord som staves likt forlengs og baklengs",
+            "a": "Palindrom"
+        }
+    ]
+}

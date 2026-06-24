@@ -1,0 +1,115 @@
+{
+    "title": "Uke 11 Forsterkende læring 🎮",
+    "description": "Reinforcement learning: agent, miljø, belønning og Q-læring",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Forsterkende læring (reinforcement learning)",
+            "a": "En agent lærer ved prøving og feiling: den utfører handlinger i et miljø og justerer atferden ut fra belønninger den får."
+        },
+        {
+            "q": "Agent og miljø",
+            "a": "Agenten er den lærende beslutningstakeren.\nMiljøet er alt agenten samhandler med og får tilstander og belønninger fra."
+        },
+        {
+            "q": "Tilstand, handling, belønning",
+            "a": "Tilstand: situasjonen agenten er i.\nHandling: hva den velger å gjøre.\nBelønning: tallverdi som sier hvor bra handlingen var."
+        },
+        {
+            "q": "Policy (strategi)",
+            "a": "Regelen som avgjør hvilken handling agenten velger i en gitt tilstand. Målet er å lære en policy som maksimerer belønning over tid."
+        },
+        {
+            "q": "Markov beslutningsprosess (MDP)",
+            "a": "Den matematiske rammen for RL: tilstander, handlinger, overgangssannsynligheter og belønninger, der fremtiden kun avhenger av nåtilstanden."
+        },
+        {
+            "q": "Fremtidig diskontert belønning",
+            "a": "$G_t = \\sum_{k=0}^{\\infty} \\gamma^k r_{t+k+1}$\nSummen av fremtidige belønninger, der senere belønninger vektes lavere."
+        },
+        {
+            "q": "Diskonteringsfaktor $\\gamma$",
+            "a": "Et tall i $[0,1]$ som bestemmer hvor mye fremtidige belønninger teller.\nNær 0 → kortsiktig; nær 1 → langsiktig."
+        },
+        {
+            "q": "Q-verdi",
+            "a": "$Q(s,a)$\nForventet fremtidig diskontert belønning ved å ta handling $a$ i tilstand $s$ og deretter følge policyen."
+        },
+        {
+            "q": "Q-læring: oppdatering",
+            "a": "$Q(s,a) \\leftarrow Q(s,a) + \\alpha\\big[r + \\gamma \\max_{a'} Q(s',a') - Q(s,a)\\big]$ (off-policy)."
+        },
+        {
+            "q": "SARSA: oppdatering",
+            "a": "$Q(s,a) \\leftarrow Q(s,a) + \\alpha\\big[r + \\gamma Q(s',a') - Q(s,a)\\big]$ (on-policy)\nBruker handlingen som faktisk ble valgt."
+        },
+        {
+            "q": "Utforskning vs. utnyttelse",
+            "a": "Utforskning: prøve nye handlinger for å lære mer.\nUtnyttelse: velge det beste man vet om. RL må balansere disse."
+        },
+        {
+            "q": "Epsilon-grådig",
+            "a": "Velg en tilfeldig handling med sannsynlighet $\\epsilon$ (utforskning), ellers $\\arg\\max_a Q(s,a)$ (utnyttelse)."
+        },
+        {
+            "q": "RL vs. veiledet og ikke-veiledet læring",
+            "a": "Veiledet: lær fra data med fasit.\nIkke-veiledet: finn struktur uten fasit.\nForsterkende: lær ved prøving og feiling med belønning og straff, uten fasitsvar."
+        },
+        {
+            "q": "Credit assignment-problemet",
+            "a": "Belønningen kan være forsinket, så det er vanskelig å vite hvilke tidligere handlinger som faktisk førte til belønningen (eller feilen)."
+        },
+        {
+            "q": "Belønningsfunksjonen",
+            "a": "$r_{t+1}$ er en funksjon av tilstand $s_t$ og handling $a_t$.\nDefineres vanligvis manuelt av utvikleren og kan være negativ (straff). Agentens mål er å maksimere total belønning."
+        },
+        {
+            "q": "Dårlig spesifiserte belønningsfunksjoner",
+            "a": "Hvis belønningen er feil definert, kan agenten finne uventede løsninger som maksimerer belønning uten å løse den egentlige oppgaven (reward hacking)."
+        },
+        {
+            "q": "Markov-egenskapen",
+            "a": "Neste tilstand og belønning avhenger kun av nåværende tilstand og handling, ikke hele historikken:\n$P(r_t, s_{t+1} \\mid s_0,a_0,\\dots,s_t,a_t) = P(r_t, s_{t+1} \\mid s_t, a_t)$."
+        },
+        {
+            "q": "MDP som tuppel",
+            "a": "En MDP er $(S, A, P_a, R_a)$:\n$S$ tilstander, $A$ handlinger, $P_a(s,s')$ sannsynlighet for å gå fra $s$ til $s'$ med handling $a$, $R_a(s,s')$ belønning for handlingen."
+        },
+        {
+            "q": "Verdi (value)",
+            "a": "Forventet fremtidig belønning fra en tilstand eller handling. $Q$ og $V$ er ukjente i utgangspunktet; målet med læringen er å estimere dem ved å utforske miljøet."
+        },
+        {
+            "q": "$V(s)$ vs. $Q(s,a)$",
+            "a": "$V(s)$ er verdien av en tilstand (gjennomsnitt over handlinger).\n$Q(s,a)$ er verdien av et bestemt par av tilstand og handling. $Q$ sier direkte hvilken handling som er best, mens $V$ er mer kompakt."
+        },
+        {
+            "q": "Hvordan Q-læring lærer verdier",
+            "a": "Verdier «sendes tilbake» fra nåværende tilstand til den forrige, slik at informasjon om belønning gradvis forplanter seg bakover gjennom tilstandene."
+        },
+        {
+            "q": "Grådig handlingsvalg",
+            "a": "Velg alltid handlingen med høyest verdi: $\\text{handling} = \\arg\\max_a Q(s,a)$. Gir ingen utforskning."
+        },
+        {
+            "q": "Softmax handlingsvalg",
+            "a": "Konverterer Q-verdiene til en sannsynlighetsfordeling slik at høyere $Q$ gir høyere valgsannsynlighet:\n$P(a_i) = \\frac{e^{Q(s,a_i)}}{\\sum_k e^{Q(s,a_k)}}$."
+        },
+        {
+            "q": "On-policy vs. off-policy",
+            "a": "Off-policy (Q-læring): oppdateringen antar at vi velger den mest verdifulle handlingen i neste tilstand.\nOn-policy (SARSA): oppdateringen antar at vi følger vår faktiske policy, inkludert utforskning."
+        },
+        {
+            "q": "Q-læring vs. SARSA ved stupet",
+            "a": "Q-læring lærer en risikabel, men effektiv policy nær kanten siden den antar optimal fremtidig handling.\nSARSA lærer en tryggere, men mindre effektiv policy fordi den tar høyde for tilfeldig utforskning som kan føre utfor."
+        },
+        {
+            "q": "Dyp forsterkende læring",
+            "a": "I stedet for en tabell over Q-verdier brukes et stort nevralt nettverk til å lære sammenhengen mellom tilstander/handlinger og verdi. Lar RL løse mye mer komplekse problemer."
+        },
+        {
+            "q": "Agenten velger egne treningsdata",
+            "a": "En viktig forskjell fra annen ML: i RL påvirker agenten selv hvilke data den ser gjennom handlingene sine, og må derfor balansere utforsking og utnytting."
+        }
+    ]
+}

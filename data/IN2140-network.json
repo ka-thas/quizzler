@@ -1,0 +1,379 @@
+{
+    "title": "IN2140 Network 📡",
+    "description": "Flashcards med Network begreper",
+    "credit": "",
+    "questions": [
+        {
+            "q": "IP address (Internet Protocol address)",
+            "a": "A unique identifier for a device on a network"
+        },
+        {
+            "q": "(network) node",
+            "a": "A common name to refer to both end systems and intermediate systems"
+        },
+        {
+            "q": "MAC address (Media Access Control address)",
+            "a": "Hardware address that identifies a network interface"
+        },
+        {
+            "q": "Subnet mask",
+            "a": "Defines the network and host portions of an IP address"
+        },
+        {
+            "q": "Router",
+            "a": "Device that forwards data between networks"
+        },
+        {
+            "q": "Switch",
+            "a": "Device that connects devices within the same network"
+        },
+        {
+            "q": "Hub",
+            "a": "Basic device that broadcasts data to all connected devices"
+        },
+        {
+            "q": "Gateway",
+            "a": "Connects different networks and translates protocols"
+        },
+        {
+            "q": "Packet",
+            "a": "A small unit of data sent over a network"
+        },
+        {
+            "q": "Frame (in networks)",
+            "a": "Data packet at the Data Link layer"
+        },
+        {
+            "q": "Port number",
+            "a": "Identifies specific processes or services on a device"
+        },
+        {
+            "q": "TCP (Transmission Control Protocol)",
+            "a": "Reliable, connection-oriented transport protocol"
+        },
+        {
+            "q": "UDP (User Datagram Protocol)",
+            "a": "Connectionless, faster transport protocol without guarantees"
+        },
+        {
+            "q": "DNS (Domain Name System)",
+            "a": "Resolves domain names to IP addresses"
+        },
+        {
+            "q": "DHCP (Dynamic Host Configuration Protocol)",
+            "a": "Automatically assigns IP addresses to devices"
+        },
+        {
+            "q": "NAT (Network Address Translation)",
+            "a": "Translates private IPs to a public IP"
+        },
+        {
+            "q": "ARP (Address Resolution Protocol)",
+            "a": "Maps IP addresses to MAC addresses"
+        },
+        {
+            "q": "ICMP (Internet Control Message Protocol)",
+            "a": "Sends error and status messages (like ping)"
+        },
+        {
+            "q": "Socket",
+            "a": "Endpoint for sending or receiving data across a network"
+        },
+        {
+            "q": "Firewall",
+            "a": "Filters network traffic for security"
+        },
+        {
+            "q": "VPN (Virtual Private Network)",
+            "a": "Creates a secure tunnel over the internet"
+        },
+        {
+            "q": "SSL/TLS (Secure Sockets Layer / Transport Layer Security)",
+            "a": "Encrypts data for secure communication"
+        },
+        {
+            "q": "HTTP (HyperText Transfer Protocol)",
+            "a": "Protocol for transferring web pages"
+        },
+        {
+            "q": "HTTPS (HyperText Transfer Protocol Secure)",
+            "a": "Secure version of HTTP using encryption"
+        },
+        {
+            "q": "FTP (File Transfer Protocol)",
+            "a": "Transfers files over a network"
+        },
+        {
+            "q": "SFTP (SSH File Transfer Protocol)",
+            "a": "Secure file transfer protocol over SSH"
+        },
+        {
+            "q": "SSH (Secure Shell)",
+            "a": "Secure remote login protocol"
+        },
+        {
+            "q": "Telnet",
+            "a": "Unencrypted protocol for remote login"
+        },
+        {
+            "q": "SMTP (Simple Mail Transfer Protocol)",
+            "a": "Protocol for sending emails"
+        },
+        {
+            "q": "POP3 (Post Office Protocol version 3)",
+            "a": "Retrieves emails from a server"
+        },
+        {
+            "q": "IMAP (Internet Message Access Protocol)",
+            "a": "Accesses and manages email on the server"
+        },
+        {
+            "q": "Ping",
+            "a": "Tests network reachability"
+        },
+        {
+            "q": "Traceroute",
+            "a": "Shows the path packets take to a destination"
+        },
+        {
+            "q": "Bandwidth",
+            "a": "Maximum data transfer rate of a network"
+        },
+        {
+            "q": "Latency",
+            "a": "Time delay in data communication"
+        },
+        {
+            "q": "Throughput",
+            "a": "Actual data transfer rate"
+        },
+        {
+            "q": "Collision domain",
+            "a": "Area where packet collisions can occur"
+        },
+        {
+            "q": "Broadcast domain",
+            "a": "Area where a broadcast frame is forwarded"
+        },
+        {
+            "q": "OSI model (Open Systems Interconnection model)",
+            "a": "Seven-layer model for network communication"
+        },
+        {
+            "q": "TCP/IP model (Transmission Control Protocol/Internet Protocol model)",
+            "a": "Four-layer model for internet communication"
+        },
+        {
+            "q": "Application layer",
+            "a": "Handles network services to applications"
+        },
+        {
+            "q": "Presentation layer",
+            "a": "Formats and encrypts data"
+        },
+        {
+            "q": "Session layer",
+            "a": "Manages sessions between applications"
+        },
+        {
+            "q": "Transport layer",
+            "a": "Provides reliable or unreliable delivery"
+        },
+        {
+            "q": "Network layer",
+            "a": "Handles routing and addressing"
+        },
+        {
+            "q": "Data link layer",
+            "a": "Handles reliable data transfer between physically connected devices"
+        },
+        {
+            "q": "Physical layer",
+            "a": "Transmits raw bits over the medium"
+        },
+        {
+            "q": "Wired network",
+            "a": "Network using cables for connection"
+        },
+        {
+            "q": "Wireless network",
+            "a": "Network using radio signals"
+        },
+        {
+            "q": "SSID (Service Set Identifier)",
+            "a": "Network name for a wireless network"
+        },
+        {
+            "q": "BGP (Border Gateway Protocol)",
+            "a": "Routing protocol between large networks"
+        },
+        {
+            "q": "OSPF (Open Shortest Path First)",
+            "a": "Routing protocol within a network"
+        },
+        {
+            "q": "RIP (Routing Information Protocol)",
+            "a": "Simple distance-vector routing protocol"
+        },
+        {
+            "q": "Load balancing",
+            "a": "Distributes traffic across multiple servers"
+        },
+        {
+            "q": "Proxy server",
+            "a": "Acts as an intermediary between client and server"
+        },
+        {
+            "q": "NAT traversal",
+            "a": "Techniques to pass through NAT devices"
+        },
+        {
+            "q": "Multicast",
+            "a": "One-to-many network communication"
+        },
+        {
+            "q": "Unicast",
+            "a": "One-to-one network communication"
+        },
+        {
+            "q": "Broadcast",
+            "a": "One-to-all communication in a network"
+        },
+        {
+            "q": "ARP cache",
+            "a": "Stores IP-to-MAC address mappings"
+        },
+        {
+            "q": "DHCP lease",
+            "a": "Temporary assignment of an IP address"
+        },
+        {
+            "q": "VLAN (Virtual Local Area Network)",
+            "a": "Virtual network segments within a switch"
+        },
+        {
+            "q": "MPLS (Multiprotocol Label Switching)",
+            "a": "Fast packet forwarding using labels"
+        },
+        {
+            "q": "QoS (Quality of Service)",
+            "a": "Manages network traffic priorities"
+        },
+        {
+            "q": "IPsec (Internet Protocol Security)",
+            "a": "Encrypts IP traffic for secure communication"
+        },
+        {
+            "q": "Tunneling",
+            "a": "Encapsulating one protocol inside another"
+        },
+        {
+            "q": "IPv4 (Internet Protocol version 4)",
+            "a": "32-bit addressing system for the internet"
+        },
+        {
+            "q": "IPv6 (Internet Protocol version 6)",
+            "a": "128-bit addressing system to replace IPv4"
+        },
+        {
+            "q": "CIDR (Classless Inter-Domain Routing)",
+            "a": "IP address allocation method without classes"
+        },
+        {
+            "q": "Private IP address",
+            "a": "IP address used in internal networks"
+        },
+        {
+            "q": "Public IP address",
+            "a": "Globally routable IP address"
+        },
+        {
+            "q": "Loopback address",
+            "a": "127.0.0.1, tests internal network stack"
+        },
+        {
+            "q": "Default gateway",
+            "a": "Device that routes traffic to outside networks"
+        },
+        {
+            "q": "DNS resolution",
+            "a": "Translating domain names to IP addresses"
+        },
+        {
+            "q": "Reverse DNS lookup",
+            "a": "Translating IP addresses to domain names"
+        },
+        {
+            "q": "Dynamic IP",
+            "a": "IP address that changes over time"
+        },
+        {
+            "q": "Static IP",
+            "a": "IP address that does not change"
+        },
+        {
+            "q": "IP spoofing",
+            "a": "Faking an IP address to hide identity"
+        },
+        {
+            "q": "SYN flood attack (Synchronize flood attack)",
+            "a": "Denial of service by overwhelming with SYN(TCP connection) requests"
+        },
+        {
+            "q": "DDoS (Distributed Denial of Service)",
+            "a": "Distributed attack to overwhelm a service"
+        },
+        {
+            "q": "Port forwarding",
+            "a": "Redirects incoming traffic to a specific device"
+        },
+        {
+            "q": "NAT overload (Network Address Translation overload)",
+            "a": "Many private IPs share a single public IP"
+        },
+        {
+            "q": "ISP (Internet Service Provider)",
+            "a": "Company providing internet access"
+        },
+        {
+            "q": "Content Delivery Network (CDN)",
+            "a": "Distributes content closer to users by using proxy servers"
+        },
+        {
+            "q": "Peer-to-peer network",
+            "a": "Network without central servers"
+        },
+        {
+            "q": "Client-server model",
+            "a": "Network model with centralized servers"
+        },
+        {
+            "q": "Network topology",
+            "a": "Physical or logical arrangement of a network"
+        },
+        {
+            "q": "Star topology",
+            "a": "All nodes connect to a central hub"
+        },
+        {
+            "q": "Mesh topology",
+            "a": "Every node connects to every other node"
+        },
+        {
+            "q": "DVR (distance vector routing)",
+            "a": "routing protocol where routers send their estimated distance to all other routers in the network to their direction neighbours"
+        },
+        {
+            "q": "LSR (link state routing)",
+            "a": "routing protocol where routers send their estimated distance to the direct neighbours to all routers in the network"
+        },
+        {
+            "q": "Sink Tree",
+            "a": "reference for optimal routes towards one single network node"
+        },
+        {
+            "q": "Netmask",
+            "a": "bit pattern that divide the bits of a network address into their network part and their host part"
+        }
+    ]
+}

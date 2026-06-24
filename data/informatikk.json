@@ -1,0 +1,55 @@
+{
+    "title": "Informatikk",
+    "description": "",
+    "credit": "",
+    "questions": [
+        {
+            "q": "Når er fristen for å betale semesteravgiften på UiO",
+            "a": "1. september og 1. februar"
+        },
+        {
+            "q": "Hva står T-en for i ChatGPT",
+            "a": "Transformer. Generative Pre-trained Transformer"
+        },
+        {
+            "q": "Hva betyr “Chat, j'ai pété”",
+            "a": "Cat, I farted"
+        },
+        {
+            "q": "Når ble verdens første epost sendt",
+            "a": "1971"
+        },
+        {
+            "q": "Hvilke bokstaver følger QWERTY på øverste bokstavrad på tastaturet?",
+            "a": "uiopå"
+        },
+        {
+            "q": "What animal jumps over the lazy dog?",
+            "a": "fox"
+        },
+        {
+            "q": "Hvilken kommando brukes for å gå ut av vim",
+            "a": ":wq :q :q!"
+        },
+        {
+            "q": "Mikro",
+            "a": "29. april 2003\nOter"
+        },
+        {
+            "q": "IFI2 OJD ferdibygd 2011"
+        },
+        {
+            "q": "Cyb stiftet",
+            "a": "17.02.1969"
+        },
+        {
+            "q": "Simula 1962 OJD og Kristen Nygård"
+        },
+        {
+            "q": "Første datamaskin i Norge NUSSE 1954"
+        },
+        {
+            "q": "Verdens første datamaskin ENIAC 1946"
+        }
+    ]
+}

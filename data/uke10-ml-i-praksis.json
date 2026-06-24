@@ -1,0 +1,143 @@
+{
+    "title": "Uke 10 ML i praksis 🛠️",
+    "description": "Dataforberedelse, evaluering og praktiske fallgruver",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "ML-pipeline",
+            "a": "Hele kjeden fra rådata til ferdig modell: innsamling → preprosessering → trening → evaluering → utrulling."
+        },
+        {
+            "q": "Preprosessering",
+            "a": "Å rense og klargjøre data før trening: håndtere manglende verdier, kode kategorier, skalere trekk og fjerne uteliggere."
+        },
+        {
+            "q": "Manglende data",
+            "a": "Kan håndteres ved å fjerne rader/kolonner eller ved imputering (fylle inn med f.eks. gjennomsnitt, median eller en modell)."
+        },
+        {
+            "q": "One-hot encoding",
+            "a": "En kategori med $k$ verdier kodes som en binær vektor av lengde $k$ med én 1 og resten 0.\nF.eks. grønn $\\rightarrow (0, 1, 0)$."
+        },
+        {
+            "q": "Skalering: min-max",
+            "a": "$x' = \\dfrac{x - x_{\\min}}{x_{\\max} - x_{\\min}}$\nSkalerer verdiene til intervallet $[0, 1]$."
+        },
+        {
+            "q": "Skalering: standardisering (z-score)",
+            "a": "$x' = \\dfrac{x - \\mu}{\\sigma}$\nGir trekkene gjennomsnitt 0 og standardavvik 1."
+        },
+        {
+            "q": "Trening / validering / test",
+            "a": "Trening: lære vektene.\nValidering: stille inn hyperparametere.\nTest: endelig, upartisk evaluering på ukjent data."
+        },
+        {
+            "q": "Parametere vs. hyperparametere",
+            "a": "Parametere (f.eks. vekter) læres av modellen.\nHyperparametere (f.eks. læringsrate, $k$, tredybde) settes av oss før trening."
+        },
+        {
+            "q": "Kryssvalidering",
+            "a": "Deler data i flere folder og trener/tester på ulike kombinasjoner for et mer robust mål på ytelsen."
+        },
+        {
+            "q": "Bias-varians-avveiingen",
+            "a": "Høy bias → undertilpasning (for enkel modell).\nHøy varians → overtilpasning (for kompleks modell). Målet er en god balanse."
+        },
+        {
+            "q": "Datalekkasje (data leakage)",
+            "a": "Når informasjon fra testdata sniker seg inn i treningen, slik at modellen ser kunstig bra ut. F.eks. å skalere før split."
+        },
+        {
+            "q": "Forklarbarhet (explainability)",
+            "a": "Evnen til å forstå hvorfor en modell gir et bestemt svar. Viktig for tillit, feilsøking og ansvar, spesielt i «black box»-modeller."
+        },
+        {
+            "q": "Garbage in, garbage out",
+            "a": "Ingen modell, uansett hvor avansert, kan kompensere for dårlige treningsdata. Å heve datakvaliteten er ofte viktigere enn selve modellutviklingen.\nSe på dataene dine før du begynner å trene modeller!"
+        },
+        {
+            "q": "Statistiske skjevheter ved datainnsamling",
+            "a": "Utvalgsskjevhet (selection bias): er dataene representative for populasjonen?\nMåleskjevhet (measurement bias): målefeil eller inkonsekvente annoteringer.\nHistorisk skjevhet: utdaterte data.\nFrafallskjevhet (survivorship bias): deler av populasjonen mangler."
+        },
+        {
+            "q": "Rebalansering av datasett",
+            "a": "Ved alvorlig utvalgsskjevhet kan man gi større vekt til underrepresenterte grupper, eller samle inn et bedre datagrunnlag, slik at modellens ytelse overføres bedre til virkeligheten."
+        },
+        {
+            "q": "Univariat analyse",
+            "a": "Å se på hvert trekk for seg og hvordan verdiene fordeler seg.\nKategoriske trekk: søylediagram.\nNumeriske trekk: histogram, boksplott, sannsynlighetstetthet."
+        },
+        {
+            "q": "Sentralmål (gjennomsnitt, median, typetall)",
+            "a": "Gjennomsnitt: $\\bar{x} = \\dfrac{1}{n}\\sum_{i=1}^{n} x_i$.\nMedian: midtverdien i den sorterte tallrekken.\nTypetall (mode): verdien som forekommer oftest."
+        },
+        {
+            "q": "Standardavvik",
+            "a": "Måler hvor mye verdiene i snitt avviker fra gjennomsnittet:\n$$s = \\sqrt{\\dfrac{1}{n-1}\\sum_{i=1}^{n} (x_i - \\bar{x})^2}$$\n$n-1$ i nevneren gir det korrigerte (empiriske) standardavviket for en stikkprøve."
+        },
+        {
+            "q": "Normalfordeling: 68-95-99,7-regelen",
+            "a": "Når verdiene er normalfordelte ligger ca. 68 % innen $\\pm 1s$, ca. 95 % innen $\\pm 2s$ og ca. 99,7 % innen $\\pm 3s$ av gjennomsnittet."
+        },
+        {
+            "q": "Multivariat analyse",
+            "a": "Undersøker hvordan trekk korrelerer med målvariabelen og samspiller med hverandre.\nTo numeriske: spredningsdiagram.\nNumerisk + kategorisk: boksplott.\nTo kategoriske: stablet søylediagram."
+        },
+        {
+            "q": "Utliggere (outliers)",
+            "a": "Utliggere fra datafeil kan ignoreres eller behandles som manglende verdier.\n«Ekte» utliggere som er reelle observasjoner bør undersøkes nærmere, ikke bare fjernes."
+        },
+        {
+            "q": "Overflødige trekk",
+            "a": "Trekk som er tett korrelert med andre eller har overlappende innhold. Bør droppes om de ikke gir ny informasjon, men kraftige, godt regulariserte modeller er ofte robuste mot dem."
+        },
+        {
+            "q": "Konstruerte (avledede) trekk",
+            "a": "Nye trekk laget av eksisterende, f.eks. forholdstall $x_i / x_k$ eller $\\log x_i$. Fanger opp samspill og ikke-lineære sammenhenger. Spesielt nyttig for lineære modeller."
+        },
+        {
+            "q": "Ordinalvariabler",
+            "a": "Kategoriske trekk med naturlig orden, f.eks. karakterer A-F eller «liten/stor». Kan kodes som heltall i $[1, k]$ der 1 er minimum og $k$ er maksimum i skalaen."
+        },
+        {
+            "q": "Overtilpasning (overfitting)",
+            "a": "Når modellen yter mye bedre på treningssettet enn på nye data, dvs. treningstapet er vesentlig lavere enn valideringstapet. Vanlig årsak: for mange parametere i forhold til treningsdata."
+        },
+        {
+            "q": "L2-regularisering",
+            "a": "Legger til en straff for store parameterverdier i tapet:\n$$L_{\\text{reg}} = \\frac{1}{n}\\sum_k l(\\hat{y}^{(k)}, y^{(k)}) + \\lambda \\sum_{i=0}^{p} \\beta_i^2$$\nForetrekker modeller med lave parameterverdier, så ingen enkelt trekk dominerer."
+        },
+        {
+            "q": "L1-regularisering",
+            "a": "Straffer summen av absoluttverdier: $\\lambda \\sum_{i=0}^{p} |\\beta_i|$.\nGir et fortrinn til sparsomme modeller ved å skyve unødvendige parametere mot null. Kan kombineres med L2."
+        },
+        {
+            "q": "Regulariseringsstyrke $\\lambda$",
+            "a": "Hyperparameter som styrer hvor mye regulariseringen vektlegges mot treningstapet. Svært høy $\\lambda$ (f.eks. 1000) tvinger parameterne mot null, så modellen blir for enkel (undertilpasning)."
+        },
+        {
+            "q": "Implisitt regularisering",
+            "a": "Metoder som motvirker overtilpasning uten å endre tapsfunksjonen:\nEarly stopping: avslutte treningen før full konvergens.\nDropout: hoppe over tilfeldige nevroner per batch.\nBeslutningstrær: begrense maks tredybde."
+        },
+        {
+            "q": "Modellvalg: faktorer",
+            "a": "Det finnes ingen «one size fits all». Vurder: trenes modellen på fasit (veiledet/uveiledet)? Hva slags output? Hvordan ser datasettet ut? Hvor kompleks bør modellen være? Hvilke kriterier teller?"
+        },
+        {
+            "q": "Baseline",
+            "a": "En enkel referansemetode som viser hva som kan oppnås uten avansert modell. Start enkelt og kompliser etter behov: er gevinsten ved den komplekse modellen minimal, bruk den enkle."
+        },
+        {
+            "q": "Evalueringskriterier utover ytelse",
+            "a": "Ytelse på valideringssettet er ikke alt. Andre kriterier: kjørehastighet, tolkbarhet/forklarbarhet, evne til å håndtere manglende verdier, mange eller kategoriske trekk, og robusthet mot atypiske datapunkter."
+        },
+        {
+            "q": "Hyperparametersøk: grid vs. tilfeldig",
+            "a": "Hyperparametere er ofte korrelerte, så vi må teste kombinasjoner.\nGrid search: prøve alle kombinasjoner (regnekrevende).\nRandom search: prøve et tilfeldig utvalg (kan gå glipp av den beste). Verktøy som optuna søker smartere."
+        },
+        {
+            "q": "AutoML",
+            "a": "Automatisk optimering av ikke bare hyperparametere, men også valg av modell, ensembling og forbehandling. Gir ofte gode resultater, men gjør det vanskeligere å forstå hva modellen gjør. F.eks. autogluon."
+        }
+    ]
+}

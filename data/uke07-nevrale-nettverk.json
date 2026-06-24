@@ -1,0 +1,127 @@
+{
+    "title": "Uke 07 Nevrale nettverk 🧠",
+    "description": "Nevroner, lag, aktiveringsfunksjoner og tilbakepropagering",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Nevron (kunstig)",
+            "a": "En enhet som tar inn vektede input, summerer dem med en bias, og sender summen gjennom en aktiveringsfunksjon."
+        },
+        {
+            "q": "Perseptron: ut-verdi",
+            "a": "$y = f\\!\\left(\\sum_{i=1}^{n} w_i x_i + b\\right)$\nDer $f$ er aktiveringsfunksjonen (klassisk en terskel)."
+        },
+        {
+            "q": "Vekt og bias",
+            "a": "Vekt: hvor sterkt en input påvirker nevronet.\nBias: et konstantledd som forskyver aktiveringen. Begge læres under trening."
+        },
+        {
+            "q": "Input-, skjult og outputlag",
+            "a": "Inputlaget tar inn trekkene, skjulte lag transformerer dem, og outputlaget gir prediksjonen."
+        },
+        {
+            "q": "Aktiveringsfunksjon",
+            "a": "En ikke-lineær funksjon på nevronets output. Uten den ville hele nettverket kollapse til én lineær funksjon."
+        },
+        {
+            "q": "Sigmoid",
+            "a": "$\\sigma(z) = \\dfrac{1}{1 + e^{-z}}$\nKlemmer verdier til $(0,1)$. Kan gi forsvinnende gradienter i dype nett."
+        },
+        {
+            "q": "ReLU",
+            "a": "$f(x) = \\max(0, x)$\nEnkel og rask; standardvalget i skjulte lag. Lar positive verdier passere uendret."
+        },
+        {
+            "q": "Softmax",
+            "a": "Gjør outputlagets verdier om til en sannsynlighetsfordeling over klasser. Brukes i siste lag for multiklasse-klassifikasjon."
+        },
+        {
+            "q": "Terskel-funksjonen (step)",
+            "a": "$f(x) = \\begin{cases} 1 & \\text{hvis } x \\geq 0 \\\\ 0 & \\text{hvis } x < 0 \\end{cases}$\nDen klassiske perseptron-aktiveringen."
+        },
+        {
+            "q": "Forover-fase (forward pass)",
+            "a": "$\\mathbf{a}^{(l)} = f\\!\\left(\\mathbf{W}^{(l)} \\mathbf{a}^{(l-1)} + \\mathbf{b}^{(l)}\\right)$\nInput mates lagvis gjennom nettet til en prediksjon."
+        },
+        {
+            "q": "Tilbakepropagering (backpropagation)",
+            "a": "Beregner gradienten av tapet med hensyn til hver vekt ved å bruke kjerneregelen baklengs gjennom nettet."
+        },
+        {
+            "q": "Gradientnedstigning i nevrale nett",
+            "a": "Bruker gradientene fra tilbakepropagering til å justere vektene steg for steg slik at tapet minker."
+        },
+        {
+            "q": "Dypt nevralt nettverk",
+            "a": "Et nettverk med mange skjulte lag, som kan lære stadig mer abstrakte representasjoner av dataene."
+        },
+        {
+            "q": "Hvorfor må aktiveringen være ikke-lineær?",
+            "a": "Flere lineære lag etter hverandre er fortsatt bare lineært. Ikke-lineæritet lar nettet lære komplekse, ikke-lineære mønstre."
+        },
+        {
+            "q": "McCulloch & Pitts (1943)",
+            "a": "Den første matematiske modellen av et nevron, formet som en binær klassifikator. Nevronet summerer vektet input, og fyrer (gir ut 1) hvis summen er over en terskel, ellers 0."
+        },
+        {
+            "q": "Frank Rosenblatt (1958)",
+            "a": "Introduserte perseptronet, gjennombruddet for nevrale nettverk som en lærende maskinlæringsalgoritme."
+        },
+        {
+            "q": "Perseptron-læringsregelen",
+            "a": "$\\Delta w_i = \\eta\\,(y - \\hat{y})\\,x_i$\nVektene justeres proporsjonalt med feilen mellom korrekt verdi $y$ og predikert verdi $\\hat{y}$.\n$\\eta$ er læringsraten (mellom 0 og 1)."
+        },
+        {
+            "q": "Hva betyr hatten i $\\hat{y}$?",
+            "a": "$\\hat{y}$ er nettverkets predikerte ut-verdi. Hatten skiller den fra den sanne verdien $y$ (ground truth)."
+        },
+        {
+            "q": "Når garanterer perseptron-regelen konvergens?",
+            "a": "Hvis treningsdataene er lineært separerbare og læringsraten er lav nok, konvergerer regelen til riktig klassifisering på treningssettet."
+        },
+        {
+            "q": "Minsky & Papert (1969): begrensning",
+            "a": "De beviste at et ettlags-perseptron kun kan løse lineært separerbare problemer. De fleste praktiske problemer er for komplekse for et enkelt perseptron."
+        },
+        {
+            "q": "Beslutningsgrense: perseptron vs. logistisk regresjon",
+            "a": "Perseptronets grense er strengere: den deler bare inn i $\\hat{y}=1$ eller $\\hat{y}=0$ uten sannsynlighetsverdier. Logistisk regresjon gir glidende sannsynligheter mellom 0 og 1."
+        },
+        {
+            "q": "Universell approksimering",
+            "a": "Et flerlags nevralt nettverk kan i teorien lære en hvilken som helst mapping fra inndata til utdata. Utfordringen er å finne de riktige vektverdiene."
+        },
+        {
+            "q": "Hvorfor flere lag?",
+            "a": "Ettlags-perseptroner gir kun lineære beslutningsgrenser. Flere lag kombinerer segmenter til mer komplekse grenser og dekomponerer problemet."
+        },
+        {
+            "q": "Nevralt nettverk vs. dyp læring",
+            "a": "Nevrale nettverk er den underliggende teknologien; dyp læring er bruk av nevrale nett med mange (dype) lag, og står bak de største ML-gjennombruddene de siste 10-15 år."
+        },
+        {
+            "q": "Hvorfor må aktiveringsfunksjoner være deriverbare?",
+            "a": "Tilbakepropagering krever at vi beregner deriverte av aktiveringsfunksjonene med hensyn på input. Derfor brukes deriverbare funksjoner som sigmoid og ReLU, ikke terskelfunksjonen, i moderne nett."
+        },
+        {
+            "q": "Feilsignal $\\delta$ i tilbakepropagering",
+            "a": "Først beregnes feilen $\\delta_i^{(j)}$ i ut-nevronene. Dette feilsignalet propagerer bakover gjennom hvert skjulte lag som $\\delta_i^{(k)}$, og brukes til å oppdatere vektene i lag $k$."
+        },
+        {
+            "q": "Output-oppsett: regresjon",
+            "a": "Kun én ut-node og ingen aktiveringsfunksjon i ut-laget (identitet $f(s)=s$). Skjulte lag gir ikke-lineæritet. Tapsfunksjon: MSE."
+        },
+        {
+            "q": "Output-oppsett: binær vs. flerklasse-klassifikasjon",
+            "a": "Binær: én ut-node med sigmoid og kryssentropi som tap.\nFlerklasse: én ut-node per klasse med softmax, tolket som sannsynligheter."
+        },
+        {
+            "q": "Batch, mini-batch og stokastisk gradientnedstigning",
+            "a": "Stokastisk: oppdater etter hvert enkelt datapunkt.\nBatch: oppdater etter hele treningssettet (gjennomsnittlig feil).\nMini-batch: oppdater etter en delmengde; mest brukt i praksis, tilpasset minnet."
+        },
+        {
+            "q": "Parametere vs. hyperparametere",
+            "a": "Vektene i nettverket er parametere som læres. Antall lag og noder, læringsrate o.l. er hyperparametere, som justeres ved hjelp av et uavhengig valideringssett."
+        }
+    ]
+}

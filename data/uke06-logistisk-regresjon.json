@@ -1,0 +1,115 @@
+{
+    "title": "Uke 06 Logistisk regresjon 🎚️",
+    "description": "Klassifikasjon med sigmoid, softmax og kryssentropi",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Logistisk regresjon",
+            "a": "Klassifikasjonsmetode som sender en lineær kombinasjon av trekkene gjennom sigmoid-funksjonen for å gi en sannsynlighet."
+        },
+        {
+            "q": "Sigmoid-funksjonen",
+            "a": "$\\sigma(z) = \\dfrac{1}{1 + e^{-z}}$\nKlemmer ethvert tall inn i intervallet $(0, 1)$, så det kan tolkes som en sannsynlighet."
+        },
+        {
+            "q": "Logistisk regresjon (2 klasser)",
+            "a": "$\\hat{y} = \\sigma(\\mathbf{w} \\cdot \\mathbf{x} + b) = \\dfrac{1}{1 + e^{-(\\mathbf{w} \\cdot \\mathbf{x} + b)}}$"
+        },
+        {
+            "q": "Hvordan fattes beslutningen?",
+            "a": "Klassifiser som positiv klasse hvis $\\hat{y} \\geq 0.5$, ellers negativ. Terskelen kan justeres etter behov."
+        },
+        {
+            "q": "Lineær vs. logistisk regresjon",
+            "a": "Lineær regresjon forutsier en kontinuerlig verdi; logistisk regresjon forutsier en sannsynlighet for en klasse."
+        },
+        {
+            "q": "Hvorfor ikke bruke MSE her?",
+            "a": "Med sigmoid blir MSE ikke-konveks og vanskelig å optimere. Kryssentropi gir en pen, konveks tapsflate."
+        },
+        {
+            "q": "Binær kryssentropi",
+            "a": "$L = -\\big[y \\log(\\hat{y}) + (1-y)\\log(1-\\hat{y})\\big]$\nStraffer selvsikre, feilaktige prediksjoner hardt."
+        },
+        {
+            "q": "Softmax-funksjonen (>2 klasser)",
+            "a": "$\\text{softmax}(z_i) = \\dfrac{e^{z_i}}{\\sum_{j=1}^{K} e^{z_j}}$\nGjør en vektor av tall om til en sannsynlighetsfordeling over $K$ klasser."
+        },
+        {
+            "q": "Kategorisk kryssentropi",
+            "a": "$L = -\\sum_{i=1}^{K} y_i \\log(\\hat{y}_i)$\nTapsfunksjon for multiklasse-klassifikasjon med softmax."
+        },
+        {
+            "q": "Beslutningsgrensen til logistisk regresjon",
+            "a": "Den er lineær: et hyperplan i trekkrommet.\nLogistisk regresjon kan derfor ikke skille klasser som ikke er lineært separable."
+        },
+        {
+            "q": "Skalar, vektor, matrise, tensor",
+            "a": "Skalar: et enkelt tall.\nVektor: en rekke tall (lengde $m$).\nMatrise: en tabell med $m$ rader og $n$ kolonner.\nTensor: generaliseringen (skalar = 0 dim., vektor = 1 dim., matrise = 2 dim., osv.)."
+        },
+        {
+            "q": "Prikkprodukt mellom to vektorer",
+            "a": "$\\mathbf{a} \\cdot \\mathbf{b} = \\sum_{i=1}^{n} a_i b_i$\nGang sammen elementene posisjonsvis og summer. Vektorene må ha samme lengde."
+        },
+        {
+            "q": "Elementvis produkt vs. matriseprodukt",
+            "a": "Elementvis produkt ($\\circ$) ganger sammen elementer på samme posisjon. Matriseproduktet er noe helt annet og bygger på prikkprodukt mellom rader og kolonner."
+        },
+        {
+            "q": "Når er matriseproduktet $AB$ definert?",
+            "a": "Når antall kolonner i $A$ er lik antall rader i $B$. Hvis $A$ er $(m, n)$ og $B$ er $(n, p)$, blir $C = AB$ av dimensjon $(m, p)$."
+        },
+        {
+            "q": "Hvordan beregnes en celle i matriseproduktet?",
+            "a": "$c_{ij} = \\sum_{k=1}^{n} a_{ik} b_{kj}$\nPrikkproduktet mellom rad $i$ i $A$ og kolonne $j$ i $B$."
+        },
+        {
+            "q": "Lineær regresjon på matriseform",
+            "a": "$\\mathbf{y} = X\\mathbf{w} + b$, hvor $X$ er $n$ datapunkter (rader) med $p$ trekk (kolonner). Gir hele prediksjonsvektoren i ett steg."
+        },
+        {
+            "q": "Hvorfor matriseoperasjoner i ML?",
+            "a": "Utover matematisk eleganse kjører de mye raskere enn sekvensiell behandling av datapunkter, takket være optimaliseringer i moderne CPU- og GPU-arkitekturer."
+        },
+        {
+            "q": "Probabilistisk klassifikasjonsmodell",
+            "a": "Logistisk regresjon gir en betinget sannsynlighet $P(c \\mid \\mathbf{x})$: sannsynligheten for klasse $c$ gitt inputtrekkene $\\mathbf{x}$. Klassene antas gjensidig utelukkende."
+        },
+        {
+            "q": "Hvorfor trenger binær logistisk regresjon bare én sannsynlighet?",
+            "a": "Med to gjensidig utelukkende klasser gjelder $P(c_2 \\mid \\mathbf{x}) = 1 - P(c_1 \\mid \\mathbf{x})$, siden sannsynlighetene må summere til 1."
+        },
+        {
+            "q": "Logits",
+            "a": "De vektede summene $z_j = \\sum_i w_{ij} x_i + b_j$ før normalisering med softmax. De uttrykker en score som så gjøres om til en sannsynlighet."
+        },
+        {
+            "q": "Multinomisk logistisk regresjon",
+            "a": "Navnet på logistisk regresjon med $> 2$ klasser (også kalt softmax-regresjon). Bruker en egen vektvektor $\\mathbf{w}_j$ og konstantledd $b_j$ per klasse, og softmax i stedet for sigmoid."
+        },
+        {
+            "q": "Antall parametere i multinomisk logistisk regresjon",
+            "a": "Med $C$ klasser og $p$ trekk: $C \\cdot p$ vekter pluss $C$ konstantledd, altså $C(p+1)$ parametere. Antall treningseksempler påvirker ikke dette."
+        },
+        {
+            "q": "BCE per eksempel (caseform)",
+            "a": "$l_{\\text{BCE}} = -\\log \\hat{y}^{(k)}$ hvis $y^{(k)} = c_1$, og $-\\log(1 - \\hat{y}^{(k)})$ hvis $y^{(k)} = c_2$, der $\\hat{y}^{(k)} = P(c_1 \\mid \\mathbf{x}^{(k)})$."
+        },
+        {
+            "q": "Gjennomsnittlig tap over treningssettet",
+            "a": "$\\bar{L} = \\dfrac{1}{n} \\sum_{k=1}^{n} l\\big(\\hat{y}^{(k)}, y^{(k)}\\big)$\nMinimeres med stokastisk gradientnedstigning."
+        },
+        {
+            "q": "Prediksjon med argmax",
+            "a": "$c^* = \\arg\\max_{c \\in \\mathcal{C}} P(c \\mid \\mathbf{x})$\nVelg den mest sannsynlige klassen. Stjernen $*$ betegner den beste verdien."
+        },
+        {
+            "q": "Hvordan tolke vektene i logistisk regresjon?",
+            "a": "$w_{ij} > 0$: når $x_i$ øker, øker $P(c_j \\mid \\mathbf{x})$.\n$w_{ij} < 0$: når $x_i$ øker, minker $P(c_j \\mid \\mathbf{x})$.\n$w_{ij} \\approx 0$: liten påvirkning. Større tallverdi gir større påvirkning."
+        },
+        {
+            "q": "Sammenheng mellom avstand til beslutningsgrensen og sikkerhet",
+            "a": "Sannsynligheten øker med avstanden til grensen. Punkter nær grensen er de mest usikre; punkter langt unna klassifiseres med høy sikkerhet."
+        }
+    ]
+}

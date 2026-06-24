@@ -1,0 +1,12 @@
+{
+    "title": "IN3050 All 📗",
+    "description": "Flashcards med IN1030 begreper",
+    "credit": "",
+    "questions": [],
+    "combine": [
+        "IN3050-ea",
+        "IN3050-supervised",
+        "IN3050-unsupervised",
+        "IN3050-RL"
+    ]
+}

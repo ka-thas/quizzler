@@ -1,0 +1,187 @@
+{
+    "title": "IN1160 Formler 🧮",
+    "description": "Formler fra IN1160 ML-pensum (LaTeX)",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Generell vektornotasjon",
+            "a": "$$\\vec{x} = (x_1, x_2, \\dots, x_n)$$\nen vektor med $n$ komponenter (dimensjoner)."
+        },
+        {
+            "q": "Lengde (norm) av en vektor",
+            "a": "$$\\|\\vec{x}\\| = \\sqrt{\\sum_{i=1}^{n} x_i^2} = \\sqrt{x_1^2 + x_2^2 + \\dots + x_n^2}$$"
+        },
+        {
+            "q": "Lengdenormalisering",
+            "a": "$$\\hat{x} = \\dfrac{\\vec{x}}{\\|\\vec{x}\\|}$$\ngir en enhetsvektor med lengde 1."
+        },
+        {
+            "q": "Euklidsk avstand",
+            "a": "$$d(\\vec{a}, \\vec{b}) = \\sqrt{\\sum_{i=1}^{n} (a_i - b_i)^2}$$"
+        },
+        {
+            "q": "Prikkprodukt (dot product)",
+            "a": "$$\\vec{a} \\cdot \\vec{b} = \\sum_{i=1}^{n} a_i b_i = \\|\\vec{a}\\|\\,\\|\\vec{b}\\|\\cos\\theta$$"
+        },
+        {
+            "q": "Kosinuslikhet",
+            "a": "$$\\cos\\theta = \\dfrac{\\vec{a} \\cdot \\vec{b}}{\\|\\vec{a}\\|\\,\\|\\vec{b}\\|} = \\dfrac{\\sum_i a_i b_i}{\\sqrt{\\sum_i a_i^2}\\,\\sqrt{\\sum_i b_i^2}}$$"
+        },
+        {
+            "q": "TF-IDF",
+            "a": "$$\\text{tf-idf}(t,d) = \\text{tf}(t,d) \\cdot \\log\\dfrac{N}{\\text{df}(t)}$$\nder $N$ er antall dokumenter og $\\text{df}(t)$ er antall dokumenter som inneholder term $t$."
+        },
+        {
+            "q": "Sentroidevektor",
+            "a": "$$\\vec{\\mu} = \\dfrac{1}{|C|} \\sum_{\\vec{x} \\in C} \\vec{x}$$\ngjennomsnittsvektoren til alle punktene i klyngen $C$."
+        },
+        {
+            "q": "Nøyaktighet (accuracy)",
+            "a": "$$\\text{Nøyaktighet} = \\dfrac{TP + TN}{TP + TN + FP + FN}$$"
+        },
+        {
+            "q": "Presisjon (precision)",
+            "a": "$$\\text{Presisjon} = \\dfrac{TP}{TP + FP}$$"
+        },
+        {
+            "q": "Sensitivitet (recall)",
+            "a": "$$\\text{Sensitivitet} = \\dfrac{TP}{TP + FN}$$"
+        },
+        {
+            "q": "F1-mål",
+            "a": "$$F_1 = 2 \\cdot \\dfrac{\\text{presisjon} \\cdot \\text{sensitivitet}}{\\text{presisjon} + \\text{sensitivitet}}$$"
+        },
+        {
+            "q": "Klyngeintern kvadratsum (WCSS)",
+            "a": "$$\\text{WCSS} = \\sum_{k=1}^{K} \\sum_{\\vec{x} \\in C_k} \\|\\vec{x} - \\vec{\\mu}_k\\|^2$$"
+        },
+        {
+            "q": "Lineær regresjon (grunnformel)",
+            "a": "$$\\hat{y} = w_0 + w_1 x_1 + w_2 x_2 + \\dots + w_n x_n = w_0 + \\sum_{i=1}^{n} w_i x_i$$"
+        },
+        {
+            "q": "Gjennomsnittlig kvadratfeil (MSE)",
+            "a": "$$\\text{MSE} = \\dfrac{1}{m} \\sum_{i=1}^{m} (y_i - \\hat{y}_i)^2$$"
+        },
+        {
+            "q": "Lineær regresjon i matriseformat",
+            "a": "$$\\hat{\\mathbf{y}} = \\mathbf{X}\\mathbf{w}$$\nder $\\mathbf{X}$ er datamatrisen og $\\mathbf{w}$ er vektvektoren."
+        },
+        {
+            "q": "Matriseprodukt",
+            "a": "$$(\\mathbf{AB})_{ij} = \\sum_{k=1}^{n} A_{ik} B_{kj}$$\nantall kolonner i $\\mathbf{A}$ må være lik antall rader i $\\mathbf{B}$."
+        },
+        {
+            "q": "Sigmoid-funksjonen",
+            "a": "$$\\sigma(z) = \\dfrac{1}{1 + e^{-z}}$$"
+        },
+        {
+            "q": "Logistisk regresjon (2 klasser, sigmoid)",
+            "a": "$$\\hat{y} = \\sigma(\\mathbf{w} \\cdot \\mathbf{x} + b) = \\dfrac{1}{1 + e^{-(\\mathbf{w} \\cdot \\mathbf{x} + b)}}$$"
+        },
+        {
+            "q": "Softmax-funksjonen (>2 klasser)",
+            "a": "$$\\text{softmax}(z_i) = \\dfrac{e^{z_i}}{\\sum_{j=1}^{K} e^{z_j}}$$"
+        },
+        {
+            "q": "Binær kryssentropi",
+            "a": "$$L = -\\big[y \\log(\\hat{y}) + (1-y)\\log(1-\\hat{y})\\big]$$"
+        },
+        {
+            "q": "Kategorisk kryssentropi",
+            "a": "$$L = -\\sum_{i=1}^{K} y_i \\log(\\hat{y}_i)$$"
+        },
+        {
+            "q": "Perseptron\nut-verdi",
+            "a": "$$y = f\\!\\left(\\sum_{i=1}^{n} w_i x_i + b\\right)$$\nder $f$ er aktiveringsfunksjonen (f.eks. terskel)."
+        },
+        {
+            "q": "Perseptron\noppdatering av vekter",
+            "a": "$$w_i \\leftarrow w_i + \\eta\\,(y - \\hat{y})\\,x_i$$\nder $\\eta$ er læringsraten."
+        },
+        {
+            "q": "Flerlags nevralt nett\nforover-fase",
+            "a": "$$\\mathbf{a}^{(l)} = f\\!\\left(\\mathbf{W}^{(l)} \\mathbf{a}^{(l-1)} + \\mathbf{b}^{(l)}\\right)$$\naktiveringen i lag $l$."
+        },
+        {
+            "q": "Terskel-funksjonen (step)",
+            "a": "$$f(x) = \\begin{cases} 1 & \\text{hvis } x \\geq 0 \\\\ 0 & \\text{hvis } x < 0 \\end{cases}$$"
+        },
+        {
+            "q": "ReLU",
+            "a": "$$f(x) = \\max(0, x)$$"
+        },
+        {
+            "q": "Entropi",
+            "a": "$$H(S) = -\\sum_{i=1}^{c} p_i \\log_2 p_i$$\nmåler urenhet; brukes for å finne den reneste splitten."
+        },
+        {
+            "q": "Gini-urenhet",
+            "a": "$$\\text{Gini}(S) = 1 - \\sum_{i=1}^{c} p_i^2$$"
+        },
+        {
+            "q": "Informasjonsgevinst (information gain)",
+            "a": "$$IG = H(S) - \\sum_{k} \\dfrac{|S_k|}{|S|} H(S_k)$$"
+        },
+        {
+            "q": "Gjennomsnitt (mean)",
+            "a": "$$\\bar{x} = \\dfrac{1}{n}\\sum_{i=1}^{n} x_i$$"
+        },
+        {
+            "q": "Median",
+            "a": "Den midterste verdien når dataene sorteres. Ved partall antall verdier: gjennomsnittet av de to midterste."
+        },
+        {
+            "q": "Typetall (modus)",
+            "a": "Verdien som forekommer hyppigst i datasettet."
+        },
+        {
+            "q": "Standardavvik",
+            "a": "$$\\sigma = \\sqrt{\\dfrac{1}{n}\\sum_{i=1}^{n}(x_i - \\bar{x})^2}$$"
+        },
+        {
+            "q": "One-hot encoding",
+            "a": "En kategori med $k$ mulige verdier kodes som en binær vektor av lengde $k$ med én 1 og resten 0. F.eks. rød/grønn/blå: grønn $\\rightarrow (0, 1, 0)$."
+        },
+        {
+            "q": "Skalering\nmin-max",
+            "a": "$$x' = \\dfrac{x - x_{\\min}}{x_{\\max} - x_{\\min}}$$\nskalerer verdiene til intervallet $[0, 1]$."
+        },
+        {
+            "q": "Skalering\nstandardisering (z-score)",
+            "a": "$$x' = \\dfrac{x - \\mu}{\\sigma}$$"
+        },
+        {
+            "q": "L1-regularisering (Lasso)",
+            "a": "$$\\lambda \\sum_{i=1}^{n} |w_i|$$\nlegges til tapsfunksjonen; gir sparsomme (sparse) vekter."
+        },
+        {
+            "q": "L2-regularisering (Ridge)",
+            "a": "$$\\lambda \\sum_{i=1}^{n} w_i^2$$\nlegges til tapsfunksjonen; krymper vekter mot null."
+        },
+        {
+            "q": "Fremtidig diskontert belønning",
+            "a": "$$G_t = \\sum_{k=0}^{\\infty} \\gamma^k r_{t+k+1} = r_{t+1} + \\gamma r_{t+2} + \\gamma^2 r_{t+3} + \\dots$$"
+        },
+        {
+            "q": "Q-læring\noppdatering",
+            "a": "$$Q(s,a) \\leftarrow Q(s,a) + \\alpha\\big[r + \\gamma \\max_{a'} Q(s',a') - Q(s,a)\\big]$$\n(off-policy)"
+        },
+        {
+            "q": "SARSA\noppdatering",
+            "a": "$$Q(s,a) \\leftarrow Q(s,a) + \\alpha\\big[r + \\gamma Q(s',a') - Q(s,a)\\big]$$\n(on-policy)"
+        },
+        {
+            "q": "Handlingsvalg\ngrådig",
+            "a": "$$a = \\arg\\max_a Q(s,a)$$\nvelger alltid handlingen med høyest Q-verdi."
+        },
+        {
+            "q": "Handlingsvalg\nepsilon-grådig",
+            "a": "Velg en tilfeldig handling med sannsynlighet $\\epsilon$, ellers $\\arg\\max_a Q(s,a)$ med sannsynlighet $1 - \\epsilon$."
+        },
+        {
+            "q": "Handlingsvalg\nsoftmax (Boltzmann)",
+            "a": "$$P(a) = \\dfrac{e^{Q(s,a)/\\tau}}{\\sum_{b} e^{Q(s,b)/\\tau}}$$\nder $\\tau$ er temperaturen."
+        }
+    ]
+}

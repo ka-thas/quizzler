@@ -1,0 +1,107 @@
+{
+    "title": "Uke 09 Beslutningstrær 🌳",
+    "description": "Beslutningstrær, urenhetsmål og ensemblemetoder",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Beslutningstre",
+            "a": "En modell som klassifiserer eller forutsier ved å stille en sekvens av ja/nei-spørsmål om trekkene, fra rot til blad."
+        },
+        {
+            "q": "Node, splitt og blad",
+            "a": "Node: et testpunkt på et trekk.\nSplitt: oppdelingen av data ved en node.\nBlad: en endenode som gir prediksjonen."
+        },
+        {
+            "q": "CART",
+            "a": "Classification and Regression Trees.\nAlgoritme som bygger binære trær ved å velge splitter som minimerer urenheten (ofte Gini)."
+        },
+        {
+            "q": "Entropi",
+            "a": "$H(S) = -\\sum_{i=1}^{c} p_i \\log_2 p_i$\nMåler urenhet/uorden i en mengde; 0 betyr helt ren (én klasse)."
+        },
+        {
+            "q": "Gini-urenhet",
+            "a": "$\\text{Gini}(S) = 1 - \\sum_{i=1}^{c} p_i^2$\nSannsynligheten for å klassifisere et tilfeldig element feil; lavere er renere."
+        },
+        {
+            "q": "Informasjonsgevinst (information gain)",
+            "a": "$IG = H(S) - \\sum_{k} \\dfrac{|S_k|}{|S|} H(S_k)$\nReduksjonen i entropi etter en splitt. Treet velger splitten med høyest gevinst."
+        },
+        {
+            "q": "Overtilpasning i beslutningstrær",
+            "a": "Dype trær kan lære treningsdata utenat. Motvirkes ved beskjæring (pruning), maks dybde eller minimum antall eksempler per blad."
+        },
+        {
+            "q": "Fordeler med beslutningstrær",
+            "a": "Lette å tolke og visualisere, krever lite preprosessering, og håndterer både numeriske og kategoriske trekk."
+        },
+        {
+            "q": "Ensemblemetoder",
+            "a": "Kombinerer mange modeller for bedre og mer stabile prediksjoner enn én enkelt modell."
+        },
+        {
+            "q": "Tilfeldige skoger (random forest)",
+            "a": "Et ensemble av mange beslutningstrær trent på tilfeldige delmengder av data og trekk; prediksjonene kombineres ved flertall/gjennomsnitt."
+        },
+        {
+            "q": "Hvorfor virker tilfeldige skoger bedre enn ett tre?",
+            "a": "Ved å midle over mange ukorrelerte trær reduseres variansen og overtilpasningen som ett enkelt tre er utsatt for."
+        },
+        {
+            "q": "Rot og løvnode",
+            "a": "Roten er den øverste noden der det første spørsmålet stilles.\nLøvnodene er de nederste nodene som gir den endelige prediksjonen."
+        },
+        {
+            "q": "Hvit boks vs. sort boks",
+            "a": "Hvit boks: modeller vi kan kikke inn i og forstå, som beslutningstrær.\nSort boks: modeller som er vanskelige å tolke, som nevrale nettverk."
+        },
+        {
+            "q": "Forklarbar KI (XAI)",
+            "a": "eXplainable Artificial Intelligence: feltet som utvikler teknikker for å gjøre modeller og algoritmer mer forklarbare og tolkbare."
+        },
+        {
+            "q": "Hva er målet med å finne den beste splitten?",
+            "a": "Å finne trekket $k$ og terskelverdien $t_k$ som gir de reneste deltrærne, altså sub-trær med størst mulig overvekt av én enkelt klasse."
+        },
+        {
+            "q": "Hvorfor er grådige treningsalgoritmer som CART grådige?",
+            "a": "De velger den lokalt beste splitten ved hvert steg uten å garantere et globalt optimalt tre."
+        },
+        {
+            "q": "Stoppkriterier ved trening av beslutningstre",
+            "a": "Bygging fortsetter til nodene er rene, til treet når en maks dybde, eller til andre stoppkriterier er nådd."
+        },
+        {
+            "q": "Regularisering av beslutningstrær",
+            "a": "Begrenser treets frihet for å redusere overtilpasning via hyperparametere som maks dybde, maks antall løvnoder, maks trekk per splitt, og minimum antall datapunkter per node/løvnode."
+        },
+        {
+            "q": "Begrensninger ved beslutningstrær",
+            "a": "Sensitive for rotering av data (kun loddrette/vannrette splitter), og har stor varians der små endringer gir store utslag i treet."
+        },
+        {
+            "q": "Hvorfor virker ensembler? (wisdom of crowds)",
+            "a": "Om mange ikke-eksperter går sammen om et svar, er gjennomsnittssvaret deres ofte veldig bra. Samme prinsipp gjelder for samlinger av modeller."
+        },
+        {
+            "q": "Svake lærere (weak learners)",
+            "a": "Modeller som bare så vidt er bedre enn tilfeldig gjetting. Et ensemble av mange svake lærere kan likevel gi sterke prediksjoner."
+        },
+        {
+            "q": "Uavhengighet i ensembler",
+            "a": "Enkeltmodellene bør være mest mulig uavhengige. Gjør de samme typen feil, mister vi effekten av at de kompenserer for hverandre.\nOppnås ved å trene på ulike deler av data eller bruke ulike algoritmer."
+        },
+        {
+            "q": "Hard avstemming (hard voting)",
+            "a": "Ensemblet svarer med den klassen flest av modellene stemmer på (majoritet)."
+        },
+        {
+            "q": "Myk avstemming (soft voting)",
+            "a": "Modellene gir sannsynligheter for hver klasse, og ensemblet summerer disse. Gir ofte høyere nøyaktighet enn hard avstemming, men krever at modellene kan estimere sannsynligheter."
+        },
+        {
+            "q": "Hvordan gjør en tilfeldig skog trærne uavhengige?",
+            "a": "Hvert tre trenes på tilfeldige datapunkter, og ved hver splitt velges trekk blant en tilfeldig delmengde. Standard i scikit-learn er $\\sqrt{n}$ trekk gitt $n$ trekk totalt."
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "title": "Uke 02 Trekkvektorer, cosinuslikhet, euklidsk avstand 📐",
+    "description": "Hvordan objekter representeres som vektorer og sammenlignes geometrisk",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Trekk (feature)",
+            "a": "En målbar egenskap ved et objekt som brukes som input til en ML-modell.\nF.eks. høyde, ordfrekvens eller pikselverdi."
+        },
+        {
+            "q": "Trekkvektor",
+            "a": "$\\vec{x} = (x_1, x_2, \\dots, x_n)$\nEn representasjon av et objekt som en liste med $n$ tallverdier, ett tall per trekk."
+        },
+        {
+            "q": "Vektorrom",
+            "a": "Et $n$-dimensjonalt rom der hvert objekt er et punkt (vektor).\nLar oss sammenligne objekter geometrisk via avstand og vinkel."
+        },
+        {
+            "q": "Dimensjon",
+            "a": "Antall trekk (komponenter) i en trekkvektor.\nAltså antall akser i vektorrommet."
+        },
+        {
+            "q": "Lengde (norm) av en vektor",
+            "a": "$\\|\\vec{x}\\| = \\sqrt{\\sum_{i=1}^{n} x_i^2}$\nAvstanden fra origo til punktet vektoren peker på."
+        },
+        {
+            "q": "Euklidsk avstand",
+            "a": "$d(\\vec{a}, \\vec{b}) = \\sqrt{\\sum_{i=1}^{n} (a_i - b_i)^2}$\nDen rette linjeavstanden mellom to punkter; måler hvor langt fra hverandre de er."
+        },
+        {
+            "q": "Prikkprodukt (dot product)",
+            "a": "$\\vec{a} \\cdot \\vec{b} = \\sum_{i=1}^{n} a_i b_i = \\|\\vec{a}\\|\\,\\|\\vec{b}\\|\\cos\\theta$\nMåler hvor mye to vektorer peker i samme retning."
+        },
+        {
+            "q": "Cosinuslikhet",
+            "a": "$\\cos\\theta = \\dfrac{\\vec{a} \\cdot \\vec{b}}{\\|\\vec{a}\\|\\,\\|\\vec{b}\\|}$\nLikhet basert på vinkelen mellom vektorene. Verdier fra $-1$ (motsatt) til $1$ (identisk retning)."
+        },
+        {
+            "q": "Cosinuslikhet vs. euklidsk avstand",
+            "a": "Cosinuslikhet ser på retning (vinkel) og er ufølsom for vektorlengde.\nEuklidsk avstand ser på absolutt avstand mellom punktene."
+        },
+        {
+            "q": "Lengdenormalisering",
+            "a": "$\\hat{x} = \\dfrac{\\vec{x}}{\\|\\vec{x}\\|}$\nSkalerer en vektor til lengde 1 (enhetsvektor) uten å endre retning."
+        },
+        {
+            "q": "Hvorfor cosinuslikhet for tekst?",
+            "a": "Lange dokumenter har større ordfrekvenser, men cosinus ignorerer lengde og ser kun på relative proporsjoner.\nTo dokumenter om samme tema får høy likhet selv om de er ulik lengde."
+        },
+        {
+            "q": "Bag-of-words",
+            "a": "Representasjon av en tekst som en vektor av ordfrekvenser, uten å bry seg om ordenes rekkefølge."
+        },
+        {
+            "q": "TF-IDF",
+            "a": "$\\text{tf-idf}(t,d) = \\text{tf}(t,d) \\cdot \\log\\dfrac{N}{\\text{df}(t)}$\nVekter ord høyt hvis de er hyppige i ett dokument, men sjeldne på tvers av alle dokumenter."
+        },
+        {
+            "q": "Kategoriske vs. numeriske trekk",
+            "a": "Trekk kan være kategoriske (f.eks. yrke) eller numeriske (f.eks. høyde).\nDe fleste algoritmer krever numerisk form; binære kategorier kan kodes som 0 eller 1."
+        },
+        {
+            "q": "Naboer",
+            "a": "Punkter som ligger nær hverandre i vektorrommet. Jo nærmere to punkter er, desto likere regnes objektene for å være."
+        },
+        {
+            "q": "Dimensjonalitet",
+            "a": "Antall trekk er rommets dimensjon $d$. $d \\leq 3$ kan visualiseres, men i ML er høydimensjonale rom med tusenvis av trekk helt vanlig."
+        },
+        {
+            "q": "Den distribusjonelle hypotesen",
+            "a": "Ord som forekommer i liknende kontekster har liknende betydning.\nLar oss redusere det vanskelige (å sammenligne betydning) til det enkle (å sammenligne kontekst)."
+        },
+        {
+            "q": "Distribusjonell semantikk i praksis",
+            "a": "1) Definer vokabular.\n2) Definer kontekst (f.eks. ord i samme setning).\n3) Tell kontekstord rundt hver forekomst for å lage trekkvektorene.\n4) Mål semantisk likhet som geometrisk nærhet."
+        },
+        {
+            "q": "Semantiske rom",
+            "a": "Vektorrom der et ords nærmeste naboer typisk er semantisk relaterte.\nSemantisk likhet → liknende kontekster → geometrisk nærhet."
+        },
+        {
+            "q": "Term-term-matrise",
+            "a": "En $n \\times m$ matrise der radene er ordene vi modellerer og kolonnene er kontekstord; cellene teller hvor ofte de opptrer sammen."
+        },
+        {
+            "q": "Dokument-term-matrise",
+            "a": "En $N \\times |V|$ matrise der hver rad er et dokuments bag-of-words-vektor og hver kolonne et ord i vokabularet."
+        },
+        {
+            "q": "Type vs. forekomst (token)",
+            "a": "En type er et unikt ord; en forekomst (token) er hvert enkelt tilfelle.\n«rose er en rose er en rose...» har 3 typer og 10 forekomster."
+        },
+        {
+            "q": "Tokenisering",
+            "a": "Å dele teksten opp i ord-liknende enheter (tokens) før den kan representeres som trekkvektorer."
+        },
+        {
+            "q": "Stoppord og stoppliste",
+            "a": "Høyfrekvente funksjonsord (av, det, og, å, ...) som bidrar lite semantisk og ofte filtreres bort med en stoppliste.\nEn frekvensgrense fjerner i tillegg svært sjeldne ord."
+        },
+        {
+            "q": "Zipfs lov",
+            "a": "Når ord rangeres etter frekvens, er frekvensen omtrent omvendt proporsjonal med rangen: ordet på plass $r$ forekommer ca. $1/r$ så ofte som det vanligste.\nFå ord dominerer; en lang hale forekommer sjelden."
+        },
+        {
+            "q": "Tellebaserte vektorer (sparse)",
+            "a": "Tradisjonelle ordvektorer er høydimensjonale ($d = |V|$), sparse (mest nuller) og diskrete.\nHvert trekk svarer til ett ord/symbol."
+        },
+        {
+            "q": "Embeddings",
+            "a": "Lavdimensjonale, tette (dense) og distribuerte vektorer der mening er kodet i totaliteten av verdiene.\nOfte lært som del av klassifikasjonsoppgaver, f.eks. språkmodellering."
+        },
+        {
+            "q": "Utfordringer med ordvektorer",
+            "a": "Flertydige ord får én sammenslått vektor; menneskelig bias i treningsdata gjenspeiles i vektorene; og antonymer er vanskelige å skille fra synonymer distribusjonelt."
+        },
+        {
+            "q": "Informasjonsgjenfinning (IR)",
+            "a": "Å finne relevante dokumenter for en søkestreng. Søket representeres som en vektor, og dokumentene rangeres etter avstand/likhet til søkevektoren.\nNærmeste naboer er mest relevante."
+        }
+    ]
+}

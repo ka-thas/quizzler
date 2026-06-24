@@ -1,0 +1,51 @@
+{
+    "title": "Realfag",
+    "description": "",
+    "credit": "",
+    "questions": [
+        {
+            "q": "På hvilken temperatur er Fahrenheit og Celsius like?",
+            "a": "-40º"
+        },
+        {
+            "q": "Hvilken stjerne er nest nærmest jorda",
+            "a": "Alpha Centauri"
+        },
+        {
+            "q": "Hva er lysets hastighet?",
+            "a": "C"
+        },
+        {
+            "q": "Hva heter nordstjernen",
+            "a": "Polaris"
+        },
+        {
+            "q": "DNA består av komponentene A🟩 T🟥 C🟦 G🟨. Hva er komponentenes fulle navn",
+            "a": "Adenin, Tymin, Cytosin, Guanin"
+        },
+        {
+            "q": "Japanske forskere Isamu Akasaki, Hiroshi Amano, og Shuji Nakamura vant nobelprisen i fysikk i 2014 for å oppfinne noe blått. Nøyaktig hva oppfant de?",
+            "a": "En effektiv blå LED"
+        },
+        {
+            "q": "Hvor mange hjerter har en blekksprut",
+            "a": "3"
+        },
+        {
+            "q": "Hvor mange minutter er det i en uke",
+            "a": "10080"
+        },
+        {
+            "q": "Hva er det vitenskapelige navnet på nordlys (1)",
+            "a": "Aurora Borealis"
+        },
+        {
+            "q": "Hva er det vitenskapelige navnet på Sørlys",
+            "a": "Aurora Australis"
+        },
+        {
+            "q": "Hva er kjemiske symbolet for gull",
+            "a": "Au"
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "title": "IN3050 Unsupervised 🧠",
+    "description": "Flashcards med unsupervised begreper",
+    "credit": "",
+    "questions": [
+        {
+            "q": "Neuron / Node",
+            "a": "Basic unit in a neural network that receives input, applies weights and an activation function, and produces output."
+        },
+        {
+            "q": "Weights / Biases",
+            "a": "Weights determine importance of inputs; biases shift the activation function for better fitting."
+        },
+        {
+            "q": "Activation functions",
+            "a": "Functions that introduce non-linearity into the model, allowing networks to learn complex patterns."
+        },
+        {
+            "q": "Sigmoid",
+            "a": "Activation function that maps input to a value between 0 and 1; useful for binary classification."
+        },
+        {
+            "q": "ReLU",
+            "a": "Rectified Linear Unit - returns 0 if input is negative, otherwise returns input. Efficient and popular."
+        },
+        {
+            "q": "Softmax",
+            "a": "Turns raw scores into probabilities that sum to 1; used in the final layer for multiclass classification."
+        },
+        {
+            "q": "Layers: Input / Hidden / Output",
+            "a": "Input layer receives data; hidden layers learn features; output layer produces final prediction."
+        },
+        {
+            "q": "Forward pass / Backpropagation",
+            "a": "Forward pass calculates outputs; backpropagation updates weights based on error gradients."
+        },
+        {
+            "q": "Loss function",
+            "a": "Quantifies difference between predicted and true values; guides learning."
+        },
+        {
+            "q": "Epoch / Batch / Mini-batch",
+            "a": "Epoch = full pass over data; batch = whole dataset; mini-batch = small subset used per update."
+        },
+        {
+            "q": "Feedforward NN",
+            "a": "Neural network where connections don't form cycles; data moves one way, input to output."
+        },
+        {
+            "q": "Convolutional Neural Network (CNN)",
+            "a": "NN type for image and spatial data; uses convolution layers to extract local features."
+        },
+        {
+            "q": "Recurrent Neural Network (RNN)",
+            "a": "NN for sequential data; maintains state across time steps."
+        },
+        {
+            "q": "Long Short-Term Memory (LSTM)",
+            "a": "Special RNN that can learn long-term dependencies using memory cells."
+        },
+        {
+            "q": "Transformer",
+            "a": "Attention-based architecture for sequences; highly parallelizable and powerful for NLP tasks."
+        },
+        {
+            "q": "Autoencoder",
+            "a": "NN that learns to compress and then reconstruct input data; used for dimensionality reduction."
+        },
+        {
+            "q": "Learning rate",
+            "a": "Controls the size of weight updates during training; too high = unstable, too low = slow."
+        },
+        {
+            "q": "Early stopping",
+            "a": "Halts training when performance on validation set stops improving, to avoid overfitting."
+        },
+        {
+            "q": "Weight initialization",
+            "a": "How weights are set before training; impacts convergence and learning speed."
+        },
+        {
+            "q": "Unlabeled data",
+            "a": "Data without target labels; used in unsupervised learning to find patterns or structure."
+        },
+        {
+            "q": "Clustering",
+            "a": "Grouping similar data points together without predefined labels."
+        },
+        {
+            "q": "Dimensionality reduction",
+            "a": "Reducing number of input features while preserving important structure or variance."
+        },
+        {
+            "q": "Outliers",
+            "a": "Data points that differ significantly from others; can skew models or indicate anomalies."
+        },
+        {
+            "q": "k-Means",
+            "a": "Clustering algorithm that partitions data into k groups by minimizing within-cluster variance."
+        },
+        {
+            "q": "Hierarchical clustering",
+            "a": "Builds a tree of clusters by progressively merging or splitting them based on distance."
+        },
+        {
+            "q": "Linkage methods",
+            "a": "Rules for computing distance between clusters (single, complete, average, ward)."
+        },
+        {
+            "q": "Single linkage",
+            "a": "Distance = shortest distance between any two points from two clusters."
+        },
+        {
+            "q": "Complete linkage",
+            "a": "Distance = longest distance between any two points from two clusters."
+        },
+        {
+            "q": "Average linkage",
+            "a": "Distance = average distance between all pairs from two clusters."
+        },
+        {
+            "q": "Ward linkage",
+            "a": "Merges clusters to minimize increase in total within-cluster variance."
+        },
+        {
+            "q": "Principal Component Analysis (PCA)",
+            "a": "Reduces dimensionality by projecting data onto directions of maximum variance."
+        },
+        {
+            "q": "Autoencoder (unsupervised variant)",
+            "a": "Learns compressed representations of input data without labels, then reconstructs it."
+        },
+        {
+            "q": "Denoising Autoencoder",
+            "a": "Autoencoder trained to reconstruct original input from noisy versions; improves robustness."
+        },
+        {
+            "q": "Sparse Autoencoder",
+            "a": "Autoencoder with constraint that forces many hidden units to be inactive; learns distinct features."
+        }
+    ]
+}

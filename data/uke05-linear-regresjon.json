@@ -1,0 +1,131 @@
+{
+    "title": "Uke 05 Lineær regresjon 📈",
+    "description": "Regresjon, tapsfunksjon og gradientnedstigning",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Regresjon",
+            "a": "Veiledet oppgave der målet er å forutsi en kontinuerlig tallverdi (f.eks. pris), ikke en klasse."
+        },
+        {
+            "q": "Lineær regresjon (grunnformel)",
+            "a": "$\\hat{y} = w_0 + w_1 x_1 + \\dots + w_n x_n = w_0 + \\sum_{i=1}^{n} w_i x_i$\nEn vektet sum av trekkene pluss et konstantledd."
+        },
+        {
+            "q": "Vekt (weight)",
+            "a": "$w_i$\nHvor mye trekk $x_i$ bidrar til prediksjonen. Læres under trening."
+        },
+        {
+            "q": "Bias / skjæringspunkt",
+            "a": "$w_0$\nKonstantleddet som forskyver prediksjonen; verdien når alle trekk er 0."
+        },
+        {
+            "q": "Tapsfunksjon",
+            "a": "En funksjon som måler hvor langt modellens prediksjoner er fra de sanne verdiene. Trening = minimere tapet."
+        },
+        {
+            "q": "Gjennomsnittlig kvadratfeil (MSE)",
+            "a": "$\\text{MSE} = \\dfrac{1}{m} \\sum_{i=1}^{m} (y_i - \\hat{y}_i)^2$\nStandard tapsfunksjon for regresjon; straffer store feil hardt."
+        },
+        {
+            "q": "Gradientnedstigning",
+            "a": "Iterativ optimering: juster vektene i motsatt retning av gradienten til tapet, gjentatt til tapet er minimalt."
+        },
+        {
+            "q": "Læringsrate",
+            "a": "$\\eta$\nStørrelsen på hvert steg i gradientnedstigning.\nFor høy: divergens. For lav: svært treg konvergens."
+        },
+        {
+            "q": "Stokastisk gradientnedstigning (SGD)",
+            "a": "Oppdaterer vektene ut fra ett (eller noen få) eksempler om gangen i stedet for hele datasettet.\nRaskere og mer skalerbart."
+        },
+        {
+            "q": "Lineær regresjon i matriseformat",
+            "a": "$\\hat{\\mathbf{y}} = \\mathbf{X}\\mathbf{w}$\nDer $\\mathbf{X}$ er datamatrisen og $\\mathbf{w}$ er vektvektoren."
+        },
+        {
+            "q": "Hvorfor skalere trekkene?",
+            "a": "Trekk på svært ulike skalaer gjør gradientnedstigning treg og skjev. Skalering gir raskere og mer stabil trening."
+        },
+        {
+            "q": "Regularisering (L1 / L2)",
+            "a": "Legger et straffeledd for store vekter til tapet for å hindre overtilpasning.\nL1 (Lasso) gir sparsomme vekter; L2 (Ridge) krymper vekter mot null."
+        },
+        {
+            "q": "Formålet med lineær regresjon",
+            "a": "Å predikere et tall $y$ basert på et datapunkt $x$ representert gjennom $p$ numeriske trekk (f.eks. boligpris ut fra størrelse og byggeår)."
+        },
+        {
+            "q": "Responsen $y$",
+            "a": "Outputverdien modellen skal predikere. I regresjon må $y$ ha en verdi i $\\mathbb{R}$ (et reelt tall), ikke en klasse."
+        },
+        {
+            "q": "Lineær regresjon i vektorform",
+            "a": "$\\hat{y} = \\mathbf{w}^T \\mathbf{x} + b$\nPrikkproduktet av vektvektoren $\\mathbf{w}$ og trekkvektoren $\\mathbf{x}$, pluss konstantleddet $b$."
+        },
+        {
+            "q": "Parametere (koeffisienter)",
+            "a": "Vektene $w_1, \\dots, w_p$ og konstantleddet $b$ utgjør modellens parametere. De estimeres (læres) fra data."
+        },
+        {
+            "q": "Stigningstall",
+            "a": "Med ett trekk gir lineær regresjon en rett linje der vekten $w$ er stigningstallet: hvor mye $y$ øker for hver enhets økning i $x$."
+        },
+        {
+            "q": "Hyperplan",
+            "a": "Med flere enn ett trekk blir modellen et hyperplan i stedet for en linje. Hver vekt $w_i$ angir hvor mye $y$ endres per enhet $x_i$, gitt at de andre trekkene holdes konstant."
+        },
+        {
+            "q": "Fordeler med lineær regresjon",
+            "a": "Enkel og lett å tolke, rask å trene og kjøre, og god som baseline-modell."
+        },
+        {
+            "q": "Ulemper med lineær regresjon",
+            "a": "Antar lineære sammenhenger mellom variabler, og er følsom for ekstremverdier (outliers)."
+        },
+        {
+            "q": "Treningssett",
+            "a": "Et sett av $n$ eksempler $(\\mathbf{x}^{(k)}, y^{(k)})$ med input sammen med deres «ekte» output. Ofte ekstrahert fra historiske data, f.eks. faktisk salgspris."
+        },
+        {
+            "q": "Tre komponenter som trengs for læring",
+            "a": "1. Et treningssett av $n$ eksempler\n2. En tapsfunksjon som måler avviket mellom prediksjoner og faktiske verdier\n3. En optimeringsmetode som leter etter gode verdier for $\\mathbf{w}$ og $b$."
+        },
+        {
+            "q": "Hatt-notasjonen $\\hat{y}$",
+            "a": "«Hatten» viser at $\\hat{y}^{(k)} = \\mathbf{w}^T \\mathbf{x}^{(k)} + b$ er modellens prediksjon, ikke den faktiske fasitverdien $y^{(k)}$."
+        },
+        {
+            "q": "Minste kvadraters metode",
+            "a": "Den klassiske estimeringsmetoden (flere hundre år gammel) der den «beste» modellen er den som minimerer MSE på treningssettet."
+        },
+        {
+            "q": "Iterativ optimering",
+            "a": "Vi starter med en «dum» (tilfeldig) løsning for parameterne og forbedrer den gradvis, steg for steg, inntil tapet ikke lenger lar seg redusere."
+        },
+        {
+            "q": "Mini-batch SGD",
+            "a": "Beregner gradienten på små utvalg (mini-batcher) $\\mathcal{B}$ av treningsdata av gangen og oppdaterer parameterne etter hver. «Stokastisk» fordi hvert steg bruker et lite, tilfeldig utvalg."
+        },
+        {
+            "q": "Analytisk løsning vs. optimering",
+            "a": "Lineær regresjon kan løses analytisk uten optimering, men kurset bruker optimering fordi analytiske løsninger skalerer dårlig med mange trekk og ikke virker for mer avanserte modeller."
+        },
+        {
+            "q": "Forklarbarhet (vektenes fortegn)",
+            "a": "$w_i > 0$: større $x_i$ øker $y$.\n$w_i < 0$: større $x_i$ minsker $y$.\n$w_i \\approx 0$: $x_i$ påvirker nesten ikke $y$. Større tallverdi gir større påvirkning."
+        },
+        {
+            "q": "Dummy-trekk $x_0$",
+            "a": "Et trekk som alltid har verdi 1, slik at konstantleddet kan skrives som $w_0$ inni summen: $\\hat{y} = \\sum_{i=0}^{p} w_i x_i = \\mathbf{w}^T \\mathbf{x}$. Endrer ikke modellen, bare notasjonen."
+        },
+        {
+            "q": "Forbehandling av kategoriske trekk",
+            "a": "Kategoriske trekk (f.eks. kjønn eller yrke) må konverteres til tall før de kan brukes i modellen, og trekk med store verdier bør normaliseres."
+        },
+        {
+            "q": "Probabilistisk prediksjon",
+            "a": "En vanlig regresjonsmodell gir bare ett tall, men mer avanserte versjoner gir en hel sannsynlighetsfordeling, f.eks. «prisen blir mellom 7,8 og 9,3 mkr. med 95 % sikkerhet»."
+        }
+    ]
+}

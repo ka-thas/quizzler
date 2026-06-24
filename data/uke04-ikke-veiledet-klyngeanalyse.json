@@ -1,0 +1,123 @@
+{
+    "title": "Uke 04 Ikke-veiledet klyngeanalyse 🪢",
+    "description": "Klyngeanalyse: K-means, hierarkisk klynging og Rocchio",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Ikke-veiledet læring",
+            "a": "Læring fra umerket data, der målet er å finne struktur eller mønstre uten en fasit."
+        },
+        {
+            "q": "Klyngeanalyse (clustering)",
+            "a": "Å gruppere objekter slik at like objekter havner i samme klynge, og ulike objekter i forskjellige klynger."
+        },
+        {
+            "q": "Sentroide",
+            "a": "$\\vec{\\mu} = \\dfrac{1}{|C|} \\sum_{\\vec{x} \\in C} \\vec{x}$\nGjennomsnittsvektoren til alle punktene i en klynge $C$."
+        },
+        {
+            "q": "K-means",
+            "a": "Deler data i $K$ klynger ved å minimere avstanden fra hvert punkt til klyngens sentroide."
+        },
+        {
+            "q": "K-means: stegene",
+            "a": "1) Initialiser $K$ sentroider.\n2) Tilordne hvert punkt til nærmeste sentroide.\n3) Flytt hver sentroide til gjennomsnittet av sine punkter.\n4) Gjenta 2-3 til det stabiliserer seg."
+        },
+        {
+            "q": "Klyngeintern kvadratsum (WCSS)",
+            "a": "$\\text{WCSS} = \\sum_{k=1}^{K} \\sum_{\\vec{x} \\in C_k} \\|\\vec{x} - \\vec{\\mu}_k\\|^2$\nSummen av kvadrerte avstander til sentroiden; lavere verdi betyr tettere klynger."
+        },
+        {
+            "q": "Albuemetoden (elbow method)",
+            "a": "Plott WCSS mot antall klynger $K$ og velg $K$ ved «albuen», der flere klynger gir lite ekstra gevinst."
+        },
+        {
+            "q": "Svakheter ved K-means",
+            "a": "Man må velge $K$ på forhånd, resultatet avhenger av tilfeldig initialisering, og metoden er følsom for skala og uteliggere."
+        },
+        {
+            "q": "Hierarkisk klyngeanalyse",
+            "a": "Bygger et tre av nøstede klynger. Trenger ikke å velge $K$ på forhånd og kan visualiseres som et dendrogram."
+        },
+        {
+            "q": "Agglomerativ vs. divisiv klynging",
+            "a": "Agglomerativ (bottom-up): start med ett punkt per klynge og slå sammen.\nDivisiv (top-down): start med én klynge og del opp."
+        },
+        {
+            "q": "Dendrogram",
+            "a": "Trediagram som viser hvordan klynger slås sammen, og på hvilken avstand. Kuttes på et nivå for å få et bestemt antall klynger."
+        },
+        {
+            "q": "Rocchio-algoritmen",
+            "a": "Representerer hver klasse/klynge med sin sentroide, og tilordner nye punkter til den nærmeste sentroiden."
+        },
+        {
+            "q": "Anvendelser av klyngeanalyse",
+            "a": "Dimensjonsreduksjon, klassebaserte trekk for andre modeller, visualisering og utforskende dataanalyse (EDA), nyhetsaggregering og gruppering av søkeresultater."
+        },
+        {
+            "q": "Flat vs. hierarkisk klyngeanalyse",
+            "a": "Flat (f.eks. k-means) deler dataene direkte i et sett klynger.\nHierarkisk bygger en trestruktur av nøstede klynger, enten nedenfra-og-opp eller ovenfra-og-ned."
+        },
+        {
+            "q": "Klyngeanalyse som optimaliseringsproblem",
+            "a": "Finn en tilordning $\\gamma: O \\to C$ som optimerer en målfunksjon: høy intra-klynge-likhet og lav inter-klynge-likhet.\nÅ enumerere alle partisjoner er eksponentielt, så vi approksimerer iterativt."
+        },
+        {
+            "q": "Partisjon",
+            "a": "En oppdeling av objektene der hvert objekt tilordnes nøyaktig én klynge. Parametere er antall klynger $k$ og likhetsfunksjonen $s$."
+        },
+        {
+            "q": "k-means: initialisering (seeding)",
+            "a": "Startsentroidene kan velges på flere måter (tilfeldige eksempler, tilfeldige punkter, tilfeldige klynger ...). Valget kan ha stor betydning for sluttresultatet."
+        },
+        {
+            "q": "k-means: stoppekriterier",
+            "a": "F.eks. et fast antall iterasjoner, at sentroidene knapt endrer seg, eller at reduksjonen i målfunksjonen faller under en terskel."
+        },
+        {
+            "q": "k-means: konvergens",
+            "a": "WCSS er monotont avtagende, så algoritmen konvergerer garantert, men ikke nødvendigvis til det globale minimumet.\nDen er ikke-deterministisk; kjør gjerne flere initialiseringer."
+        },
+        {
+            "q": "k-means som gjentatt Rocchio",
+            "a": "Hver iterasjon av k-means tilsvarer Rocchio-klassifikasjon mot sentroidene. k-means arver dermed Rocchios antakelse om kuleformede, like store klyngeregioner."
+        },
+        {
+            "q": "Koblingskriterier (linkage)",
+            "a": "Mål på likhet mellom klynger som avgjør hvilke som slås sammen i hvert hierarkisk steg. Ulike kriterier gir ulik sekvens av sammenslåinger."
+        },
+        {
+            "q": "Enkel- vs. komplettkobling",
+            "a": "Enkelkobling: minste avstand mellom medlemmer («nærmeste naboer»); kan gi langstrakte, kjedede klynger.\nKomplettkobling: minste maks-avstand («fjerneste naboer»); gir kompakte klynger, men er følsom for uteliggere."
+        },
+        {
+            "q": "Gjennomsnitts- og sentroidekobling",
+            "a": "Gjennomsnittskobling: høyest gjennomsnittlig parvis likhet; ofte beste standardvalg.\nSentroidekobling: likhet mellom klyngenes sentroider, men ikke-monoton."
+        },
+        {
+            "q": "Nærhetsmatrise (proximity matrix)",
+            "a": "En forhåndsberegnet matrise av parvise objektlikheter/-avstander, som alle koblingskriteriene kan beregnes ut fra."
+        },
+        {
+            "q": "Monotoni og inversjoner",
+            "a": "Vanligvis antas kombinasjonslikheten å avta monotont gjennom sammenslåingene. Sentroidekobling bryter dette og kan gi inversjoner: kryssende linjer i dendrogrammet."
+        },
+        {
+            "q": "Beskjæring av dendrogrammet",
+            "a": "Treet representerer én partisjon per nivå. For å få én flat partisjonering kuttes treet ved en terskel (f.eks. på kombinasjonslikhet eller antall klynger)."
+        },
+        {
+            "q": "Renhet (purity)",
+            "a": "Intrinsisk mål med gullstandard: i hvilken grad hver klynge hovedsakelig inneholder objekter fra én enkelt klasse."
+        },
+        {
+            "q": "Silhuettkoeffisient",
+            "a": "Intrinsisk mål uten gullstandard: hvor likt et objekt er sin egen klynge (kohesjon) sammenlignet med andre klynger (separasjon)."
+        },
+        {
+            "q": "Hvorfor ikke alltid klyngeanalyse?",
+            "a": "Uten merkelapper mister vi kontroll og tolkbarhet: kriteriene og antall grupper er uklare, og det er vrient å vite hva grupperingen faktisk representerer."
+        }
+    ]
+}

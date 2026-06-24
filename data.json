@@ -1,0 +1,16 @@
+{
+    "Dyr": "data/dyr.json",
+    "Film": "data/film.json",
+    "Growth": "data/growth.json",
+    "Helse": "data/helse.json",
+    "Historie": "data/historie.json",
+    "IFI": "data/ifi.json",
+    "Informatikk": "data/informatikk.json",
+    "Jul": "data/jul.json",
+    "Kunst": "data/kunst.json",
+    "Norge": "data/norge.json",
+    "Quiz": "data/quiz.json",
+    "Realfag": "data/realfag.json",
+    "Rykkinn": "data/rykkinn.json",
+    "Spill": "data/spill.json"
+}

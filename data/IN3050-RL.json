@@ -1,0 +1,91 @@
+{
+    "title": "IN3050 RL 🐕",
+    "description": "Flashcards med RL begreper",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Agent",
+            "a": "The decision-maker in reinforcement learning, e.g., a robot, AI, or software program."
+        },
+        {
+            "q": "Environment",
+            "a": "Everything the agent interacts with or operates within."
+        },
+        {
+            "q": "State",
+            "a": "A snapshot or representation of the environment at a specific point in time."
+        },
+        {
+            "q": "Action",
+            "a": "What the agent chooses to do in a given state."
+        },
+        {
+            "q": "Reward",
+            "a": "A scalar signal from the environment telling the agent how good or bad its last action was."
+        },
+        {
+            "q": "Policy",
+            "a": "The agent’s strategy: a mapping from states to actions (π(s) → a)."
+        },
+        {
+            "q": "Episode",
+            "a": "A full sequence of interactions from the start state to a terminal state."
+        },
+        {
+            "q": "Value Function",
+            "a": "Estimates how good a state or action is in terms of expected future rewards."
+        },
+        {
+            "q": "State-value function: V(s)",
+            "a": "The expected return (total future reward) starting from state s and following the policy."
+        },
+        {
+            "q": "Action-value function: Q(s, a)",
+            "a": "The expected return starting from state s, taking action a, and then following the policy."
+        },
+        {
+            "q": "Total future reward",
+            "a": "The cumulative reward an agent expects to receive from a given point onward."
+        },
+        {
+            "q": "Discount Factor γ",
+            "a": "A number between 0 and 1 that reduces the value of future rewards to prioritize immediate ones."
+        },
+        {
+            "q": "Q-Learning",
+            "a": "A value-based RL algorithm that learns the optimal action-value function off-policy."
+        },
+        {
+            "q": "SARSA",
+            "a": "An on-policy RL algorithm that updates Q-values based on the actual action taken (State-Action-Reward-State-Action)."
+        },
+        {
+            "q": "Deep Q-Network (DQN)",
+            "a": "An extension of Q-learning using deep neural networks to estimate Q-values."
+        },
+        {
+            "q": "Policy Gradient",
+            "a": "A policy-based RL method that directly adjusts the policy parameters to maximize expected reward."
+        },
+        {
+            "q": "Actor-Critic",
+            "a": "Combines policy (actor) and value function (critic) for efficient learning."
+        },
+        {
+            "q": "ϵ-greedy",
+            "a": "An exploration strategy where the agent chooses a random action with probability ϵ and the best known action with 1−ϵ."
+        },
+        {
+            "q": "Boltzmann exploration",
+            "a": "Selects actions probabilistically based on their estimated values using a softmax function."
+        },
+        {
+            "q": "Upper Confidence Bound (UCB)",
+            "a": "Selects actions with the highest potential value considering both average reward and uncertainty."
+        },
+        {
+            "q": "Entropy regularization",
+            "a": "Encourages exploration by adding a term to the objective that favors more stochastic policies."
+        }
+    ]
+}

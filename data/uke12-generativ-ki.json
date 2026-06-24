@@ -1,0 +1,135 @@
+{
+    "title": "Uke 12 Generativ KI 🎨",
+    "description": "Generative modeller, språkmodeller, transformere og GAN",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Generativ KI",
+            "a": "Modeller som lærer fordelingen til treningsdata og kan generere nytt, lignende innhold (tekst, bilder, lyd osv.)."
+        },
+        {
+            "q": "Diskriminativ vs. generativ modell",
+            "a": "Diskriminativ modellerer $P(y\\mid x)$ (forutsi klasse fra input).\nGenerativ modellerer $P(x)$ eller $P(x, y)$ og kan lage ny data."
+        },
+        {
+            "q": "Språkmodell (LLM)",
+            "a": "En modell trent til å forutsi neste token i en tekst. Store språkmodeller (LLM) lærer bredt språk og kunnskap fra enorme tekstmengder."
+        },
+        {
+            "q": "Token",
+            "a": "En tekstbit (ord, orddel eller tegn) som er språkmodellens grunnenhet for input og output."
+        },
+        {
+            "q": "Embedding",
+            "a": "En tett vektorrepresentasjon av et token/objekt, der nærhet i vektorrommet gjenspeiler likhet i betydning."
+        },
+        {
+            "q": "Transformer",
+            "a": "Nevral arkitektur bygd på attention som behandler hele sekvensen parallelt. Grunnlaget for moderne språkmodeller."
+        },
+        {
+            "q": "Attention (oppmerksomhet)",
+            "a": "Mekanisme som lar modellen vekte hvilke andre deler av input som er relevante for hvert token når den lager en representasjon."
+        },
+        {
+            "q": "Selvveiledet fortrening",
+            "a": "Modellen lærer av umerket data ved å løse en oppgave avledet av dataene selv (f.eks. forutsi neste/maskerte token)."
+        },
+        {
+            "q": "GAN (Generative Adversarial Network)",
+            "a": "To nett som konkurrerer: en generator lager falske eksempler, en diskriminator prøver å avsløre dem. De forbedrer hverandre."
+        },
+        {
+            "q": "Diffusjonsmodell",
+            "a": "Genererer data ved å legge til støy på treningsdata og lære å reversere prosessen. Lærer å gå fra ren støy til et nytt bilde."
+        },
+        {
+            "q": "Prompt",
+            "a": "Instruksjonen/teksten man gir en generativ modell for å styre hva den produserer."
+        },
+        {
+            "q": "Hallusinasjon",
+            "a": "Når en generativ modell produserer innhold som høres troverdig ut, men er feilaktig eller oppdiktet."
+        },
+        {
+            "q": "Dyp læring",
+            "a": "Nevrale nettverk med flere skjulte lag (derav \"dyp\"). Revolusjonen fra ca. 2012 ble muliggjort av bedre maskinvare, store datamengder og nye algoritmer/arkitekturer."
+        },
+        {
+            "q": "Hvorfor lærer dype nett trekkene selv?",
+            "a": "Tidligere måtte trekk defineres manuelt (alder, kanter, farger osv.).\nDype nett lærer trekkene automatisk fra rådata, noe som er svært nyttig med store mengder ustrukturert data."
+        },
+        {
+            "q": "Vanlige nevrale arkitekturer",
+            "a": "CNN (bilder), RNN (sekvenser som tekst/tale/tidsserier), GAN (bildegenerering) og Transformer (språk og generering)."
+        },
+        {
+            "q": "Statisk vs. kontekstuell embedding",
+            "a": "En statisk embedding er lik uansett kontekst.\nEn kontekstuell embedding endrer seg avhengig av setningen ordet står i, slik at f.eks. \"it\" kan tolkes ulikt. Attention beregner kontekstuelle embeddinger."
+        },
+        {
+            "q": "word2vec",
+            "a": "Metode fra 2013 for å lære ordembeddinger med selvveiledet læring. I stedet for å telle forekomster trenes en klassifikator til å forutsi kontekstord; vi bryr oss om vektene (representasjonene) som læres, ikke selve klassifiseringen."
+        },
+        {
+            "q": "Tokenisering",
+            "a": "Teksten segmenteres til tokens (ord/delord) som mappes til vektorer. Vektorene initialiseres vilkårlig og læres sammen med nettverket via tilbakepropagering; en ferdigtrent modell fryser de lærte embeddingene."
+        },
+        {
+            "q": "Hvordan beregnes attention (forenklet)?",
+            "a": "Den kontekstuelle embeddingen er en vektet sum av de andre ordenes vektorer: $a_i = \\sum_{j\\le i} \\alpha_{ij} x_j$.\nVektene baseres på semantisk likhet beregnet med prikkprodukt mellom vektorene."
+        },
+        {
+            "q": "Språkmodellhode",
+            "a": "Tar utdata fra siste transformerlag og produserer en sannsynlighetsfordeling over hele vokabularet $V$. Neste ord genereres ved å sample fra denne fordelingen."
+        },
+        {
+            "q": "Oppgaver som ordprediksjon",
+            "a": "Mange oppgaver kan løses ved neste-ord-prediksjon. Gitt en prompt genererer modellen svaret ord for ord, betinget på prompt og foregående ord, ved å beregne $P(w_i \\mid w_{<i})$ og sample."
+        },
+        {
+            "q": "In-context learning (kontekstlæring)",
+            "a": "Modellen løser en oppgave ved å få eksempler på ønsket input/output i selve prompten, uten at vektene oppdateres."
+        },
+        {
+            "q": "Treningssteg for LLMer",
+            "a": "1. Grunntrening: selvveiledet neste-ord-prediksjon på stort korpus (kunnskap).\n2. Instruksjonsjustering: veiledet finjustering på instruksjon/svar-par.\n3. Preferansejustering: tilpasning til brukerpreferanser, f.eks. med RLHF."
+        },
+        {
+            "q": "RLHF (preferansejustering)",
+            "a": "Reinforcement Learning from Human Feedback. En belønningsmodell trenes på menneskelige preferanser og brukes til å justere modellen så den blir hjelpsom og ikke gjør skade."
+        },
+        {
+            "q": "Hvorfor er evaluering av generering vanskelig?",
+            "a": "Det finnes ofte ikke én absolutt gullstandard, men mange mulige riktige svar.\nSamtidig trenger vi automatisert evaluering for å sammenligne modeller."
+        },
+        {
+            "q": "ROUGE",
+            "a": "Automatisk evalueringsmål som måler overlapp av ord/ordsekvenser mellom generert tekst og referanse. Begrenset til ordform og fanger ikke fakta- eller grammatikkfeil."
+        },
+        {
+            "q": "LLM-som-dommer",
+            "a": "Bruk av en LLM til å vurdere generert tekst på kriterier som relevans, naturlighet, sannferdighet og sikkerhet. Et rimeligere alternativ til ressurskrevende menneskelig evaluering."
+        },
+        {
+            "q": "Benchmark",
+            "a": "En samling evalueringsdatasett, evalueringsmål og en aggregeringsmetode. Brukes i ledertavler der modeller rangeres på tvers av oppgaver, ofte med sammenligning mot menneskelig ytelse."
+        },
+        {
+            "q": "Åpne vs. lukkede modeller",
+            "a": "Lukkede/kommersielle modeller er kun tilgjengelige via grensesnitt med lite innsyn i trening (f.eks. GPT-5, Claude, Grok).\nÅpne modeller har nedlastbare vekter, åpen kildekode og transparens rundt treningsdata."
+        },
+        {
+            "q": "Modellstørrelse (parametre)",
+            "a": "Antall parametre kommer fra embedding-laget, transformer-blokkene og språkmodellhodet. Store modeller har milliarder av parametre, og økt størrelse henger klart sammen med bedre ytelse."
+        },
+        {
+            "q": "RAG (Retrieval Augmented Generation)",
+            "a": "Metode for å redusere hallusinering: LLMen søker etter relevant informasjon (i en database eller på nett) før responsen genereres."
+        },
+        {
+            "q": "Resonnerende modeller",
+            "a": "Modeller (f.eks. DeepSeek-R1) som trenes til å resonnere i flere steg (chain-of-thought) før de svarer, særlig nyttig for matte- og logikkoppgaver."
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "title": "IN1030",
+    "description": "Flashcards med IN1030 begreper",
+    "credit": "",
+    "questions": [
+        {
+            "q": "scrum",
+            "a": "An agile framework for managing complex work with an emphasis on software development"
+        },
+        {
+            "q": "kanban",
+            "a": "A visual system for managing work as it moves through a process"
+        },
+        {
+            "q": "agile",
+            "a": "An iterative approach to project management and software development"
+        },
+        {
+            "q": "waterfall",
+            "a": "A linear sequential approach to software development"
+        },
+        {
+            "q": "sprint",
+            "a": "A fixed time period during which specific work has to be completed in Scrum"
+        },
+        {
+            "q": "iteration",
+            "a": "A single development cycle in an agile methodology"
+        }
+    ]
+}

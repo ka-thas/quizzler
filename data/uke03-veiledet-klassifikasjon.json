@@ -1,0 +1,139 @@
+{
+    "title": "Uke 03 Veiledet klassifikasjon 🏷️",
+    "description": "Veiledet læring og klassifikasjon, k-NN og evalueringsmål",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Veiledet læring",
+            "a": "Læring fra merket data (input-output-par) der modellen lærer en funksjon fra input til riktig output."
+        },
+        {
+            "q": "Klassifikasjon",
+            "a": "Veiledet oppgave der målet er å forutsi en diskret klasse/kategori (i motsetning til regresjon, som forutsier et tall)."
+        },
+        {
+            "q": "Binær klassifikasjon",
+            "a": "Klassifikasjon med kun to mulige klasser, f.eks. spam / ikke-spam."
+        },
+        {
+            "q": "Multiklasse-klassifikasjon",
+            "a": "Klassifikasjon med mer enn to klasser, f.eks. å kjenne igjen siffer 0-9."
+        },
+        {
+            "q": "Treningssett vs. testsett",
+            "a": "Treningssettet brukes til å lære modellen; testsettet brukes til å evaluere hvor godt den generaliserer til ukjent data."
+        },
+        {
+            "q": "k-Nærmeste nabo (k-NN)",
+            "a": "Klassifiserer et nytt punkt ut fra flertallsklassen blant de $k$ nærmeste naboene i trekkrommet.\nIngen egentlig «trening»; all jobb skjer ved prediksjon."
+        },
+        {
+            "q": "Valg av $k$ i k-NN",
+            "a": "Lav $k$ → følsom for støy (overtilpasning).\nHøy $k$ → glattere, men kan viske ut detaljer (undertilpasning)."
+        },
+        {
+            "q": "Beslutningsgrense",
+            "a": "Flaten i trekkrommet som skiller de ulike predikerte klassene fra hverandre."
+        },
+        {
+            "q": "Forvirringsmatrise",
+            "a": "Tabell som viser antall sanne positive (TP), falske positive (FP), sanne negative (TN) og falske negative (FN)."
+        },
+        {
+            "q": "Nøyaktighet (accuracy)",
+            "a": "$\\dfrac{TP + TN}{TP + TN + FP + FN}$\nAndel korrekte prediksjoner.\nKan være misvisende ved ubalanserte klasser."
+        },
+        {
+            "q": "Presisjon (precision)",
+            "a": "$\\dfrac{TP}{TP + FP}$\nAv alt modellen meldte som positivt, hvor mye var faktisk positivt?"
+        },
+        {
+            "q": "Sensitivitet (recall)",
+            "a": "$\\dfrac{TP}{TP + FN}$\nAv alt som faktisk var positivt, hvor mye fanget modellen opp?"
+        },
+        {
+            "q": "F1-mål",
+            "a": "$F_1 = 2 \\cdot \\dfrac{\\text{presisjon} \\cdot \\text{sensitivitet}}{\\text{presisjon} + \\text{sensitivitet}}$\nDet harmoniske gjennomsnittet; balanserer presisjon og sensitivitet i ett tall."
+        },
+        {
+            "q": "Overtilpasning vs. undertilpasning",
+            "a": "Overtilpasning: modellen lærer støy i treningsdata og generaliserer dårlig.\nUndertilpasning: modellen er for enkel til å fange mønsteret."
+        },
+        {
+            "q": "Klassifikator",
+            "a": "En modell som er trent for å tilordne et objekt en merkelapp (klasse). Utdataene kalles ofte prediksjoner."
+        },
+        {
+            "q": "Annoterte data og gullstandard",
+            "a": "Par av objekter + riktig merkelapp; annotasjonene utgjør «veiledningen».\nDe annoterte testdataene kalles gullstandarden, som prediksjonene sammenlignes mot."
+        },
+        {
+            "q": "Multietikett (multi-label)",
+            "a": "Hvert objekt kan tilhøre flere klasser samtidig. Løses ofte med en egen binær modell per klasse.\nTil forskjell fra multiklasse, der klassene er gjensidig utelukkende."
+        },
+        {
+            "q": "Eksempler på tekstklassifikasjon",
+            "a": "Sentimentanalyse, temaklassifikasjon, forfatteridentifikasjon, spam-deteksjon, språkidentifikasjon, hatprat m.m."
+        },
+        {
+            "q": "Kontiguitetshypotesen",
+            "a": "Antakelsen bak klassifikasjon i vektorrom: objekter i samme klasse danner sammenhengende regioner uten overlapp med andre klasser."
+        },
+        {
+            "q": "Rocchio-klassifikasjon",
+            "a": "Hver klasse representeres av sin sentroide $\\vec{\\mu}_i$ (gjennomsnittsvektoren).\nEt nytt objekt tilordnes klassen til den nærmeste sentroiden, altså en nærmeste-sentroide-klassifikator."
+        },
+        {
+            "q": "Rocchio som lineær klassifikator",
+            "a": "Beslutningsgrensen mellom to klasser er punktene like langt fra begge sentroidene: en linje (2D), et plan (3D) eller et hyperplan.\nEgner seg derfor kun for lineært separerbare klasser."
+        },
+        {
+            "q": "Svakheter ved Rocchio",
+            "a": "Ser bare på avstand til sentroiden og ignorerer den lokale fordelingen i klassen. Antar at klasser er kuler med lik radius.\nDårlig for avlange, usammenhengende eller ulik-store klasser."
+        },
+        {
+            "q": "Ikke-linearitet og kernel-metoder",
+            "a": "Klasser som ikke er lineært separerbare i ett trekkrom kan bli det når trekkene projiseres til høyere dimensjonalitet. Dette er grunnlaget for kernel-metoder."
+        },
+        {
+            "q": "Voronoi-tessellering",
+            "a": "For $k=1$: hvert treningspunkt eier cellen av alle punkter som er nærmere det enn noe annet punkt. Cellene (konvekse polygoner) definerer kNNs beslutningsgrense."
+        },
+        {
+            "q": "Er kNN lineær?",
+            "a": "Nei, kNN er en ikke-lineær klassifikator.\nBeslutningsgrensen bestemmes lokalt (langs Voronoi-cellene), til forskjell fra Rocchios globale, lineære grense."
+        },
+        {
+            "q": "kNN som instans-basert læring",
+            "a": "kNN gjør ingen egentlig læring; den memorerer alle treningseksemplene (memory-/instance-based). Testtiden vokser lineært med treningssettet, men er uavhengig av antall klasser."
+        },
+        {
+            "q": "Bias-varians for kNN",
+            "a": "$k=1$: svært lav bias, svært høy varians (overtilpasning).\n$k=N$: svært høy bias, svært lav varians (undertilpasning, predikerer alltid majoritetsklassen)."
+        },
+        {
+            "q": "Myk / avstandsvektet kNN",
+            "a": "Probabilistisk: sannsynligheten for en klasse er andelen av de $k$ naboene som tilhører den.\nAvstandsvektet: nærmere naboer teller mer, noe som unngår uavgjort og kan gi bedre treff."
+        },
+        {
+            "q": "Valideringssett",
+            "a": "Et eget sett, atskilt fra trening og test, brukt til gjentatt evaluering under utvikling (valg av hyperparametere, trekk osv.) slik at testsettet forblir urørt."
+        },
+        {
+            "q": "k-fold kryssvalidering",
+            "a": "Del treningssettet i $k$ deler; tren på $k-1$ og test på den siste, gjentatt $k$ ganger. Gjennomsnittet gir et robust resultat. Ytterpunktet er «utelat-én» (leave-one-out)."
+        },
+        {
+            "q": "Vektorisering (fit/transform)",
+            "a": "Trekkene defineres ut fra treningssettet (fit), deretter lages trekkvektorene (transform). Testdata må vektoriseres med nøyaktig de samme trekkene som under trening."
+        },
+        {
+            "q": "Mikro- vs. makrogjennomsnitt",
+            "a": "Mikro: summer TP/FP/FN over alle klasser og regn så metrikk; store klasser dominerer.\nMakro: regn metrikk per klasse og midle; små klasser teller likt.\nVektet: som makro, men vektet etter klassestørrelse."
+        },
+        {
+            "q": "Intrinsisk vs. ekstrinsisk evaluering",
+            "a": "Intrinsisk: ytelse på selve oppgaven (f.eks. F1 på et testsett).\nEkstrinsisk: effekten av prediksjonene i en større «nedstrøms» oppgave, ende-til-ende."
+        }
+    ]
+}

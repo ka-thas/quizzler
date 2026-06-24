@@ -1,0 +1,159 @@
+{
+    "title": "Uke 13 Filosofi 🤔",
+    "description": "Filosofiske spørsmål om kunstig intelligens og bevissthet",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Hva er intelligens?",
+            "a": "Det finnes ingen entydig definisjon. Ofte: evnen til å lære, resonnere, tilpasse seg og løse problemer i nye situasjoner."
+        },
+        {
+            "q": "Sterk vs. svak KI",
+            "a": "Svak KI: systemer som etterligner intelligent atferd på avgrensede oppgaver.\nSterk KI: systemer med ekte forståelse og bevissthet."
+        },
+        {
+            "q": "AGI (artificial general intelligence)",
+            "a": "Hypotetisk KI med menneskelignende, generell evne til å løse et bredt spekter av oppgaver."
+        },
+        {
+            "q": "Turing-testen",
+            "a": "Foreslått av Alan Turing: en maskin «består» hvis en menneskelig dommer i en tekstsamtale ikke kan skille den fra et menneske."
+        },
+        {
+            "q": "Kritikk av Turing-testen",
+            "a": "Tester etterligning av samtale, ikke ekte forståelse. En maskin kan lure dommeren uten å «forstå» noe som helst."
+        },
+        {
+            "q": "Det kinesiske rommet (Searle)",
+            "a": "En person følger regler for å manipulere kinesiske tegn uten å forstå kinesisk. Searles poeng: symbolmanipulasjon (syntaks) gir ikke ekte forståelse (semantikk)."
+        },
+        {
+            "q": "Symbolsk KI (GOFAI)",
+            "a": "Tilnærming der intelligens er manipulasjon av eksplisitte symboler og logiske regler. Tolkbart, men sprøtt i åpne, virkelige omgivelser."
+        },
+        {
+            "q": "Konneksjonisme",
+            "a": "Tilnærming der intelligens oppstår fra mange enkle, sammenkoblede enheter (nevrale nett) som lærer fra data, ikke fra håndskrevne regler."
+        },
+        {
+            "q": "Hypotesen om det fysiske symbolsystemet",
+            "a": "Newell & Simon: et fysisk symbolsystem har de nødvendige og tilstrekkelige midlene for generell intelligent handling."
+        },
+        {
+            "q": "Kan en maskin være bevisst?",
+            "a": "Et åpent, omdiskutert spørsmål. Å oppføre seg intelligent er ikke det samme som å ha subjektiv opplevelse (bevissthet)."
+        },
+        {
+            "q": "Smal KI (narrow AI)",
+            "a": "KI rettet mot en smalt avgrenset oppgave og et gitt domene. Omfatter i praksis alle dagens KI-systemer, og kan overgå mennesker, men kun innenfor den smale oppgaven."
+        },
+        {
+            "q": "Kunstig superintelligens (ASI)",
+            "a": "Generell intelligens som langt overgår menneskelige evner på omtrent alle områder."
+        },
+        {
+            "q": "Benchmark og ledertavle (leaderboard)",
+            "a": "Et benchmark er et større testbatteri av mange mindre tester med data og metrikker. En ledertavle rangerer ulike modeller, og brukes til å sammenligne ytelse og spore fremgang over tid."
+        },
+        {
+            "q": "Metning (saturation) av tester",
+            "a": "Tendensen til at alle modeller etter hvert blir jevngode og oppnår nesten perfekt ytelse på en test, så det stadig trengs nye og vanskeligere tester."
+        },
+        {
+            "q": "Goodharts lov",
+            "a": "«When a measure becomes a target, it ceases to be a good measure.» Når en test blir et mål i seg selv, slutter den å være et godt mål, f.eks. via benchmaxxing og datalekkasje."
+        },
+        {
+            "q": "Datakontaminering (data contamination)",
+            "a": "Dårlig datahygiene der en modell trenes på testdataene (bevisst eller ubevisst), slik at gode testresultater overdriver reell ytelse."
+        },
+        {
+            "q": "Ujevn / taggete intelligens (jagged intelligence)",
+            "a": "Manglende robusthet der modeller kan løse avanserte oppgaver, men likevel snuble i trivialiteter og avsløre mangel på grunnleggende sunn fornuft."
+        },
+        {
+            "q": "Chollet: intelligens som tilegnelse av ferdigheter",
+            "a": "François Chollet (2019) definerer KGI som evnen til å tilegne seg nye ferdigheter effektivt og bredt, å generalisere til nye domener med svært lite data. Handler om abstraksjon og analogier (flytende intelligens)."
+        },
+        {
+            "q": "ARC-AGI",
+            "a": "En serie tester fra Chollet (2019) basert på abstrakt visuell problemløsning. Tester evnen til å lære av minimalt med data uten memorisering: enkelt for mennesker, vanskelig for maskiner."
+        },
+        {
+            "q": "Inference-time compute",
+            "a": "Skalering av regnekraft ved testing/inferens. Hovedgrunnen til at OpenAIs o3 i 2024 slo mennesker på ARC-AGI-1, knyttet til mer «resonnering»."
+        },
+        {
+            "q": "Sort boks-evaluering",
+            "a": "Testene våre betrakter kun inn- og utdata og behandler modellen som en sort boks. De sier ikke noe om indre mentale tilstander, bevissthet eller genuin forståelse."
+        },
+        {
+            "q": "Behavioristisk perspektiv (Turing)",
+            "a": "Turing-testen ser kun på direkte observerbar atferd, ikke på indre tilstander. En behavioristisk tilnærming til å vurdere intelligens."
+        },
+        {
+            "q": "Simulering vs. realisering (Searle)",
+            "a": "Svak KI: datamaskiner kan simulere kognitive prosesser, men aldri realisere dem selv.\nSterk KI: en datamaskin kan med riktig program inneha faktisk forståelse."
+        },
+        {
+            "q": "Bevissthet vs. intelligens (Anil Seth)",
+            "a": "Intelligens handler om å utføre; bevissthet handler om å oppleve. Ulike dimensjoner, men vanskelig for oss å skille."
+        },
+        {
+            "q": "Antropomorfisering",
+            "a": "Vår tendens til å tillegge ting bevissthet og menneskelignende egenskaper. Evolusjonært betinget og spesielt potent i møte med naturlig språk."
+        },
+        {
+            "q": "Stokastiske papegøyer (Bender et al. 2021)",
+            "a": "En språkmodell setter tilfeldig sammen språklige former den har sett i treningsdata etter sannsynligheter, uten referanse til mening: en stokastisk papegøye."
+        },
+        {
+            "q": "ELIZA-effekten",
+            "a": "Menneskers hang til å antropomorfisere maskiner, spesielt i møte med naturlig språk. Oppkalt etter Weizenbaums enkle regelbaserte psykoterapeut-bot (1966) som folk tilskrev empati og forståelse."
+        },
+        {
+            "q": "Kunstig nærhet (artificial intimacy)",
+            "a": "At stadig flere bruker KI-samtalebotter som betrodde samtalepartnere for emosjonell støtte. Gjør at selskaper optimaliserer modeller for engasjement og psykologiske aspekter, fra KI-assistenter til KI-partnere."
+        },
+        {
+            "q": "Intelligenseksplosjon",
+            "a": "Idéen om at vi kort tid etter KGI kan få superintelligens, fordi KI-systemer selv kan utvikle nye og bedre systemer i en akselererende sløyfe."
+        },
+        {
+            "q": "Feiljustering (misalignment)",
+            "a": "Når en KI har mål som ikke er samstemt med våre. En ekstremt intelligent og mektig modell med feiljusterte mål kan bli vanskelig å hindre i å oppnå dem."
+        },
+        {
+            "q": "Belønningsmanipulering (reward tampering)",
+            "a": "Problem der en agent manipulerer selve belønningssignalet sitt i stedet for å løse oppgaven slik vi mente. Et eksempel på vanskeligheten med å spesifisere mål eksplisitt."
+        },
+        {
+            "q": "Argumenter mot å bekymre seg for superintelligens",
+            "a": "Nåværende KI er så langt unna at bekymring er lite konstruktivt; vi har mer akutte utfordringer som taper oppmerksomhet; og det forskes faktisk mye på å forstå og kontrollere KI. (Mitchell, LeCun, Ng)"
+        },
+        {
+            "q": "Robusthet og snarveier (shortcuts)",
+            "a": "Modeller lærer ofte snarveier til høy ytelse i stedet for ekte forståelse, f.eks. en RL-agent som spiller perfekt uten å skjønne spillets regler. Slike snarveier er sårbare og lette å lure."
+        },
+        {
+            "q": "Hallusinering",
+            "a": "Når generative KI-systemer finner på uriktig informasjon og presenterer den selvsikkert som fakta. Skyldes dels at de trenes til å gjette neste utdata heller enn å si «jeg vet ikke»."
+        },
+        {
+            "q": "Ytelse vs. tolkbarhet",
+            "a": "En tendens til avveining: enkle modeller (lineær regresjon, beslutningstrær) er svært tolkbare, mens komplekse modeller (CNN, RNN, transformere) har høy ytelse, men er vanskelige å forstå."
+        },
+        {
+            "q": "Forklarbar KI (XAI) – motivasjon",
+            "a": "Vi vil ofte vite hvorfor en modell predikerer som den gjør. Nyttig for forståelse, tillit, og debugging/videreutvikling, og for å redusere risiko fra feiljusterte eller upålitelige modeller."
+        },
+        {
+            "q": "Word attribution",
+            "a": "Forklarbarhetsteknikk for tekstklassifisering der man ser hvor mye, og i hvilken retning, hvert ord påvirket klassifiseringen."
+        },
+        {
+            "q": "LIME / snø-ulv-eksempelet",
+            "a": "Forklaringsteknikker for bilder (Ribeiro et al. 2016) avslørte at en klassifikator hadde lært å detektere snø i bakgrunnen i stedet for å gjenkjenne selve ulven."
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+{
+    "title": "IN3050 EA 🧬",
+    "description": "Flashcards med EA begreper",
+    "credit": "Ka",
+    "questions": [
+        {
+            "q": "Search space / State space",
+            "a": "All possible configurations or solutions that an algorithm can explore."
+        },
+        {
+            "q": "Fitness function",
+            "a": "Evaluates how good a solution is in optimization or evolutionary algorithms."
+        },
+        {
+            "q": "Greedy algorithm",
+            "a": "Chooses the best immediate option without considering long-term consequences."
+        },
+        {
+            "q": "Local optimum / Global optimum",
+            "a": "Local: Best solution in a small region; Global: Best solution overall in the space."
+        },
+        {
+            "q": "Exploration vs. exploitation",
+            "a": "Exploration: Trying new areas; Exploitation: Using known good areas to improve solutions."
+        },
+        {
+            "q": "Hill Climbing",
+            "a": "Iterative search that moves to neighboring states with better fitness until a peak is reached."
+        },
+        {
+            "q": "Simulated Annealing",
+            "a": "Search algorithm that allows occasional worse moves to escape local optima, inspired by annealing in metallurgy."
+        },
+        {
+            "q": "Gradient Descent (GD)",
+            "a": "Optimization method that updates parameters in the direction of the negative gradient to minimize loss."
+        },
+        {
+            "q": "Stochastic Gradient Descent (SGD)",
+            "a": "Like GD but updates parameters using a random mini-batch, adding noise for better convergence."
+        },
+        {
+            "q": "Stochastic",
+            "a": "Involves randomness; results may vary per run (e.g., SGD, evolutionary algorithms)."
+        },
+        {
+            "q": "Deterministic",
+            "a": "No randomness; same inputs always lead to same outputs (e.g., basic gradient descent)."
+        },
+        {
+            "q": "Learning rate",
+            "a": "Controls the step size during optimization; too high = overshoot, too low = slow learning."
+        },
+        {
+            "q": "Convergence",
+            "a": "The point where the optimization algorithm stabilizes or finds an optimal solution."
+        },
+        {
+            "q": "Population",
+            "a": "A group of candidate solutions in an evolutionary algorithm."
+        },
+        {
+            "q": "Individual / Chromosome",
+            "a": "A single candidate solution in the population."
+        },
+        {
+            "q": "Genotype / Phenotype",
+            "a": "Genotype: Encoded representation of a solution; Phenotype: Actual behavior or output it produces."
+        },
+        {
+            "q": "Allele",
+            "a": "A single value at a gene position in a chromosome."
+        },
+        {
+            "q": "Selection: Tournament",
+            "a": "Selects best individuals from randomly chosen groups."
+        },
+        {
+            "q": "Selection: Ranked",
+            "a": "Ranks individuals by fitness and selects probabilistically based on rank."
+        },
+        {
+            "q": "Selection: Roulette",
+            "a": "Probability of selection is proportional to fitness; like spinning a weighted wheel."
+        },
+        {
+            "q": "Selection: Crowding",
+            "a": "Reduces selection pressure by replacing similar individuals to preserve diversity."
+        },
+        {
+            "q": "Selection: Elitism",
+            "a": "Automatically carries the best individuals to the next generation."
+        },
+        {
+            "q": "1-point crossover",
+            "a": "Swaps tails of parents at one random crossover point."
+        },
+        {
+            "q": "N-point crossover",
+            "a": "Swaps segments of parents at multiple crossover points."
+        },
+        {
+            "q": "Uniform crossover",
+            "a": "Each gene is randomly chosen from one of the parents with equal probability."
+        },
+        {
+            "q": "Intermediate (arithmetic) crossover",
+            "a": "Blends parent values using weighted averages per allele."
+        },
+        {
+            "q": "Discrete crossover",
+            "a": "Chooses each gene from one of the parents without averaging."
+        },
+        {
+            "q": "PMX",
+            "a": "Partially Mapped Crossover - used for permutations; preserves absolute positions."
+        },
+        {
+            "q": "Cycle crossover",
+            "a": "Creates offspring by alternating cycles from both parents to preserve position info."
+        },
+        {
+            "q": "Order crossover",
+            "a": "Preserves relative order of genes from parents in offspring."
+        },
+        {
+            "q": "Edge crossover",
+            "a": "Preserves edge relationships between genes in parent solutions."
+        },
+        {
+            "q": "Bit Flip Mutation",
+            "a": "Flips bits (0 to 1 or vice versa) with a small probability."
+        },
+        {
+            "q": "Uniform Mutation",
+            "a": "Each gene is replaced by a random value uniformly sampled from its domain."
+        },
+        {
+            "q": "Selection Pressure",
+            "a": "Degree to which fitter individuals are favored; too high can lead to premature convergence."
+        },
+        {
+            "q": "Genetic Algorithm (GA)",
+            "a": "An EA where solutions evolve using selection, crossover, and mutation over generations."
+        },
+        {
+            "q": "Genetic Programming (GP)",
+            "a": "Uses EA to evolve computer programs or symbolic expressions, often as trees."
+        },
+        {
+            "q": "Diversity preservation",
+            "a": "Maintains variation in the population to avoid premature convergence."
+        },
+        {
+            "q": "Island crossover",
+            "a": "Population is split into subpopulations (islands) that occasionally exchange individuals."
+        },
+        {
+            "q": "Speciation",
+            "a": "Divides population into species based on similarity to maintain diversity."
+        },
+        {
+            "q": "Shared fitness",
+            "a": "Reduces fitness of similar individuals to encourage diverse solutions."
+        },
+        {
+            "q": "Premature convergence",
+            "a": "When the population becomes too similar too early, potentially missing the global optimum."
+        },
+        {
+            "q": "Multi-objective optimization",
+            "a": "Optimization involving more than one conflicting objective, e.g., speed vs. accuracy."
+        }
+    ]
+}
