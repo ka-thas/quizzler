@@ -162,6 +162,7 @@ function updateThemeHint() {
     themeHint.textContent = n === 0
         ? "Select one or more themes to include."
         : `${n} theme${n === 1 ? "" : "s"} selected.`;
+    startQuiz.disabled = n === 0;
 }
 
 // Fisher-Yates in-place shuffle.
@@ -185,6 +186,7 @@ function renderQuiz(names) {
             questions.push(typeof q === "string" ? { q } : q);
         }
     }
+    if (!participantMode) questions = questions.filter((q) => !q.img || !q.img.length);
     if (shuffleMode) shuffleArray(questions);
     if (maxQuestions > 0) questions = questions.slice(0, maxQuestions);
     quizTitle.textContent = names.length === 1
