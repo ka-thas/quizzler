@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-theme="light">
     <head>
-        <title>Quiz</title>
+        <title>Quizzler</title>
         <script>
             // Apply saved/preferred theme before first paint to avoid a flash.
             (function () {
@@ -21,7 +21,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Quiz" />
+        <meta name="apple-mobile-web-app-title" content="Quizzler" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
@@ -58,6 +58,12 @@
                 <p class="settings-hint" id="shuffle-hint">Off — questions appear in their original order.</p>
             </div>
 
+            <div class="settings-group">
+                <span class="settings-label">Max questions</span>
+                <input type="number" id="max-questions" class="number-input" min="1" placeholder="All">
+                <p class="settings-hint" id="max-questions-hint">All questions included.</p>
+            </div>
+
             <button id="start-quiz" class="primary-button">Start quiz</button>
         </main>
 
@@ -75,7 +81,6 @@
                 <p id="slide-question"></p>
                 <div id="slide-media"></div>
                 <p id="slide-answer"></p>
-                <span id="reveal-hint">Tap to reveal answer</span>
             </div>
 
             <div id="quiz-controls">

@@ -36,10 +36,11 @@ const slideNumber = document.getElementById("slide-number");
 const slideQuestion = document.getElementById("slide-question");
 const slideMedia = document.getElementById("slide-media");
 const slideAnswer = document.getElementById("slide-answer");
-const revealHint = document.getElementById("reveal-hint");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const revealBtn = document.getElementById("reveal");
+const maxQuestionsInput = document.getElementById("max-questions");
+const maxQuestionsHint = document.getElementById("max-questions-hint");
 
 // ---------- State ----------
 let data = {};
@@ -51,6 +52,7 @@ let index = 0;
 let revealed = false;
 let participantMode = localStorage.getItem("participant") === "true";
 let shuffleMode = localStorage.getItem("shuffle") === "true";
+let maxQuestions = parseInt(localStorage.getItem("maxQuestions"), 10) || 0;
 
 // ---------- Theme ----------
 function applyTheme(theme) {
@@ -93,6 +95,25 @@ shuffleToggle.addEventListener("click", () => {
     applyShuffleMode();
 });
 applyShuffleMode();
+
+// ---------- Max questions ----------
+function applyMaxQuestions() {
+    if (maxQuestions > 0) {
+        maxQuestionsInput.value = maxQuestions;
+        maxQuestionsHint.textContent = `Capped at ${maxQuestions} questions.`;
+    } else {
+        maxQuestionsInput.value = "";
+        maxQuestionsHint.textContent = "All questions included.";
+    }
+}
+maxQuestionsInput.addEventListener("input", () => {
+    const val = parseInt(maxQuestionsInput.value, 10);
+    maxQuestions = val > 0 ? val : 0;
+    if (maxQuestions) localStorage.setItem("maxQuestions", String(maxQuestions));
+    else localStorage.removeItem("maxQuestions");
+    applyMaxQuestions();
+});
+applyMaxQuestions();
 
 // ---------- Load collections ----------
 async function fetchCollections() {
@@ -165,6 +186,7 @@ function renderQuiz(names) {
         }
     }
     if (shuffleMode) shuffleArray(questions);
+    if (maxQuestions > 0) questions = questions.slice(0, maxQuestions);
     quizTitle.textContent = names.length === 1
         ? (data[names[0]].title || names[0])
         : `${names.length} themes`;
@@ -198,12 +220,11 @@ function showSlide() {
     renderMedia(item);
     setMathText(slideAnswer, item.a || "");
     slideAnswer.style.display = "none";
-    revealHint.style.display = hasAnswer ? "" : "none";
 
     revealBtn.disabled = !hasAnswer;
     revealBtn.textContent = "Show answer";
-    prevBtn.disabled = index === 0;
-    nextBtn.disabled = index === questions.length - 1;
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
     progress.textContent = `${index + 1} / ${questions.length}`;
 }
 
@@ -212,19 +233,15 @@ function toggleAnswer() {
     if (!item || !item.a) return;
     revealed = !revealed;
     slideAnswer.style.display = revealed ? "" : "none";
-    revealHint.style.display = revealed ? "none" : "";
     revealBtn.textContent = revealed ? "Hide answer" : "Show answer";
 }
 
 function go(delta) {
-    const next = index + delta;
-    if (next < 0 || next >= questions.length) return;
-    index = next;
+    index = (index + delta + questions.length) % questions.length;
     showSlide();
 }
 
-slide.addEventListener("click", toggleAnswer);
-revealBtn.addEventListener("click", (e) => { e.stopPropagation(); toggleAnswer(); });
+revealBtn.addEventListener("click", toggleAnswer);
 prevBtn.addEventListener("click", () => go(-1));
 nextBtn.addEventListener("click", () => go(1));
 
