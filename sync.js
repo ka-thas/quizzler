@@ -20,6 +20,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const TOKEN = process.env.NOTION_TOKEN;
 const DB_INPUT = process.env.NOTION_DB;
@@ -31,7 +32,9 @@ const NOTION_VERSION = "2022-06-28";
 const PROP = {
     answer: process.env.NOTION_ANSWER_PROP || "Svar",
     group: process.env.NOTION_GROUP_PROP || "Tema",
+    image: process.env.NOTION_IMAGE_PROP || "Image",
 };
+const IMG_DIR = "data/img";
 const DEFAULT_QUIZ = process.env.NOTION_DEFAULT_QUIZ || "Quiz";
 
 if (!TOKEN || !DB_INPUT) {
@@ -71,6 +74,7 @@ function readProp(prop) {
         case "rich_text": return plain(prop.rich_text);
         case "select": return prop.select?.name || "";
         case "multi_select": return (prop.multi_select || []).map((s) => s.name);
+        case "files": return (prop.files || []).map((f) => f.file?.url || f.external?.url).filter(Boolean);
         case "number": return prop.number == null ? "" : String(prop.number);
         case "formula": return prop.formula?.string ?? (prop.formula?.number != null ? String(prop.formula.number) : "");
         default: return "";
@@ -95,6 +99,35 @@ async function queryAll(dbId) {
 
 const slug = (s) => s.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
+const CONTENT_TYPE_EXT = {
+    "image/png": ".png", "image/jpeg": ".jpg", "image/gif": ".gif",
+    "image/webp": ".webp", "image/svg+xml": ".svg",
+};
+
+// Download a remote image into data/img and return its local relative path.
+// Notion file URLs are signed and expire, so the static app can't use them
+// directly (and it must work offline); we mirror the bytes locally instead.
+// The filename hashes the URL *path* (stable across syncs — only the query
+// string's signature changes), so unchanged images aren't re-downloaded.
+async function downloadImage(url) {
+    let u;
+    try { u = new URL(url); } catch { return null; }
+    const hash = crypto.createHash("sha1").update(u.pathname).digest("hex").slice(0, 16);
+    const dir = path.join(__dirname, IMG_DIR);
+    fs.mkdirSync(dir, { recursive: true });
+    const existing = fs.readdirSync(dir).find((f) => f.startsWith(hash + "."));
+    if (existing) return `${IMG_DIR}/${existing}`;
+
+    const res = await fetch(url);
+    if (!res.ok) { console.warn(`  ! image ${res.status} ${url}`); return null; }
+    const buf = Buffer.from(await res.arrayBuffer());
+    let ext = path.extname(u.pathname).toLowerCase().replace(/[^.a-z0-9]/g, "");
+    if (!ext) ext = CONTENT_TYPE_EXT[(res.headers.get("content-type") || "").split(";")[0].trim()] || ".img";
+    const file = `${hash}${ext}`;
+    fs.writeFileSync(path.join(dir, file), buf);
+    return `${IMG_DIR}/${file}`;
+}
+
 (async () => {
     const dbId = extractId(DB_INPUT);
     console.log(`Querying Notion database ${dbId} ...`);
@@ -109,6 +142,16 @@ const slug = (s) => s.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/
         if (!q) continue;
         const a = readProp(props[PROP.answer]);
         const item = a ? { q, a } : { q };
+
+        const imgUrls = readProp(props[PROP.image]);
+        if (Array.isArray(imgUrls) && imgUrls.length) {
+            const images = [];
+            for (const url of imgUrls) {
+                const local = await downloadImage(url);
+                if (local) images.push(local);
+            }
+            if (images.length) item.img = images;
+        }
 
         let groups = readProp(props[PROP.group]);
         if (!Array.isArray(groups)) groups = groups ? [groups] : [];

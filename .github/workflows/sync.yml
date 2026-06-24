@@ -1,0 +1,74 @@
+name: Sync questions from Notion
+
+# Manual button only: run from the GitHub web/mobile app
+# (Actions tab -> "Sync questions from Notion" -> Run workflow).
+on:
+  workflow_dispatch:
+    inputs:
+      notion_db:
+        description: "Notion database id or URL (defaults to the Quiz spørsmål DB)"
+        required: false
+        default: "https://app.notion.com/p/kathas/2d5dac60133b80ffa5aaded5b13ed8ce?v=2d5dac60133b802e9ac9000ce3681d29"
+
+# Allow this workflow to push the regenerated JSON back to this repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: notion-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out quizzler
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Pull questions from Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DB: ${{ github.event.inputs.notion_db }}
+        run: node sync.js
+
+      - name: Commit regenerated data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json data
+          if git diff --cached --quiet; then
+            echo "No changes from Notion."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Sync questions from Notion"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Bump the submodule pointer in kathas-projects so projects.kathas.no
+      # rebuilds with the new data. Needs a PAT with write access to that repo.
+      - name: Bump submodule pointer in kathas-projects
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          PAT: ${{ secrets.PAT }}
+        run: |
+          git config --global url."https://x-access-token:${PAT}@github.com/".insteadOf "git@github.com:"
+          git config --global url."https://x-access-token:${PAT}@github.com/".insteadOf "https://github.com/"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git clone --depth 1 https://x-access-token:${PAT}@github.com/ka-thas/kathas-projects.git parent
+          cd parent
+          git submodule update --init --remote quizzler
+          git add quizzler
+          if git diff --cached --quiet; then
+            echo "Submodule pointer already current."
+          else
+            git commit -m "Bump quizzler: sync questions from Notion"
+            git push
+          fi

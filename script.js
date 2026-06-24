@@ -34,6 +34,7 @@ const progress = document.getElementById("progress");
 const slide = document.getElementById("slide");
 const slideNumber = document.getElementById("slide-number");
 const slideQuestion = document.getElementById("slide-question");
+const slideMedia = document.getElementById("slide-media");
 const slideAnswer = document.getElementById("slide-answer");
 const revealHint = document.getElementById("reveal-hint");
 const prevBtn = document.getElementById("prev");
@@ -171,6 +172,22 @@ function renderQuiz(names) {
     showSlide();
 }
 
+// Render a question's images on the slide. Images are part of the "projector"
+// view shown to the room, so they appear only in participant mode — the host's
+// compact view stays text-only (and avoids loading the images at all).
+function renderMedia(item) {
+    slideMedia.innerHTML = "";
+    if (!participantMode) return;
+    const sources = Array.isArray(item.img) ? item.img : item.img ? [item.img] : [];
+    for (const src of sources) {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "";
+        img.loading = "lazy";
+        slideMedia.appendChild(img);
+    }
+}
+
 function showSlide() {
     const item = questions[index] || { q: "" };
     revealed = false;
@@ -178,6 +195,7 @@ function showSlide() {
 
     slideNumber.textContent = String(index + 1);
     setMathText(slideQuestion, item.q);
+    renderMedia(item);
     setMathText(slideAnswer, item.a || "");
     slideAnswer.style.display = "none";
     revealHint.style.display = hasAnswer ? "" : "none";

@@ -49,6 +49,10 @@ parallel and assembles them into the global `data` object.
 
 **Collection file shape:** `title`, `description`, `credit`, and `questions`,
 where a question is `{ "q": ..., "a": ... }` (or a plain string for prompt-only).
+A question may also carry `"img"`: an array of local image paths (e.g.
+`["data/img/<hash>.png"]`). Images are part of the **projector view** — they are
+rendered on the slide only in participant mode; the host's compact view stays
+text-only.
 
 **`data/*.json` and `data.json` are generated — do not hand-edit.** They are
 produced by `sync.js`, which pulls from a Notion database:
@@ -65,6 +69,12 @@ the **"Quiz spørsmål"** database — `Spørsmål` (title), `Svar` (answer), `T
 (groups) — and are overridable via `NOTION_ANSWER_PROP` / `NOTION_GROUP_PROP`
 env vars. The integration must be shared with the database in Notion or the
 query returns nothing.
+
+It also reads an `Image` files property (override via `NOTION_IMAGE_PROP`) and
+**downloads each image into `data/img/`**, storing the local relative path in
+the question's `img` array. The bytes are mirrored locally because Notion's file
+URLs are signed/expiring and the app is a static offline PWA. Filenames hash the
+URL path, so unchanged images aren't re-downloaded across syncs.
 
 **LaTeX:** all user-facing text goes through `setMathText(element, text)` rather
 than direct `textContent` assignment, so math renders everywhere. Supported

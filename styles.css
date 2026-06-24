@@ -265,6 +265,23 @@ button:hover {
     opacity: 0.45;
 }
 
+/* Question images — only populated in participant mode (see renderMedia). */
+#slide-media { display: none; }
+#slide-media:not(:empty) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+#slide-media img {
+    max-width: 100%;
+    max-height: 45vh;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
 #quiz-controls {
     display: flex;
     align-items: center;

@@ -1,0 +1,8 @@
+# Local secrets — never commit the Notion token.
+# In CI the token comes from the NOTION_TOKEN GitHub Actions secret instead.
+.env
+.env.*
+*.local
+
+# OS / editor cruft
+.DS_Store
