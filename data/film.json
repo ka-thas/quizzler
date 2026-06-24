@@ -4,6 +4,41 @@
     "credit": "",
     "questions": [
         {
+            "q": "Sitat og film",
+            "a": "I am your father - Star Wars V: Empire strikes back",
+            "img": [
+                "data/img/394313b0477fa368.png"
+            ]
+        },
+        {
+            "q": "Sitat og film",
+            "a": "Bond. James Bond. - James Bond",
+            "img": [
+                "data/img/5f100f1d6937d037.png"
+            ]
+        },
+        {
+            "q": "Sitat og film",
+            "a": "I’ll be Back - Terminator",
+            "img": [
+                "data/img/3f58c282d7b7504b.png"
+            ]
+        },
+        {
+            "q": "Sitat og film",
+            "a": "I’m the king of the world! - Titanic",
+            "img": [
+                "data/img/96d0e79a967518e7.png"
+            ]
+        },
+        {
+            "q": "Film og navn på karakteren",
+            "a": "Fall Guy - Colt Seavers",
+            "img": [
+                "data/img/ffccf9a274ec10cc.png"
+            ]
+        },
+        {
             "q": "I ringenes herre, for å komme inn i Mines of Moria må de løse gåten “Speak friend and enter”. Hva er svaret?",
             "a": "“Mellon” - Alvisk for venn siden dvergene ønsket alver velkommen"
         },
@@ -54,6 +89,10 @@
         {
             "q": "Hvilket startnummer har Lynet McQueen malt på siden",
             "a": "95"
+        },
+        {
+            "q": "Hva heter karakterene i Grevinnen og hovmesteren",
+            "a": "Miss Sophie, Sir James, Sir Pomeroy, Mr. Winterbottom, Sir Tobie, Admiral von Schneider"
         }
     ]
 }

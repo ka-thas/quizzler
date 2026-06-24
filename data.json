@@ -9,8 +9,8 @@
     "Jul": "data/jul.json",
     "Kunst": "data/kunst.json",
     "Norge": "data/norge.json",
-    "Quiz": "data/quiz.json",
     "Realfag": "data/realfag.json",
     "Rykkinn": "data/rykkinn.json",
-    "Spill": "data/spill.json"
+    "Spill": "data/spill.json",
+    "misc": "data/misc.json"
 }

@@ -4,15 +4,11 @@
     "credit": "",
     "questions": [
         {
-            "q": "Når er fristen for å betale semesteravgiften på UiO",
-            "a": "1. september og 1. februar"
-        },
-        {
             "q": "Hva står T-en for i ChatGPT",
             "a": "Transformer. Generative Pre-trained Transformer"
         },
         {
-            "q": "Hva betyr “Chat, j'ai pété”",
+            "q": "Hva betyr “Chat, j'ai pété” på engelsk",
             "a": "Cat, I farted"
         },
         {
@@ -24,32 +20,32 @@
             "a": "uiopå"
         },
         {
-            "q": "What animal jumps over the lazy dog?",
-            "a": "fox"
-        },
-        {
             "q": "Hvilken kommando brukes for å gå ut av vim",
             "a": ":wq :q :q!"
         },
         {
-            "q": "Mikro",
-            "a": "29. april 2003\nOter"
+            "q": "Når ble Mikro stiftet og hva er maskotten",
+            "a": "29. april 2003, Oter"
         },
         {
-            "q": "IFI2 OJD ferdibygd 2011"
+            "q": "Når ble OJD ferdibygd",
+            "a": "2011"
         },
         {
-            "q": "Cyb stiftet",
+            "q": "Når ble Cyb stiftet",
             "a": "17.02.1969"
         },
         {
-            "q": "Simula 1962 OJD og Kristen Nygård"
+            "q": "Hvilket år kom OOP",
+            "a": "Simula-67 ble publisert i 1967"
         },
         {
-            "q": "Første datamaskin i Norge NUSSE 1954"
+            "q": "Når kom Norges første datamaskin, NUSSE",
+            "a": "1954"
         },
         {
-            "q": "Verdens første datamaskin ENIAC 1946"
+            "q": "Når kom verdens første datamaskin, ENIAC",
+            "a": "1946"
         }
     ]
 }

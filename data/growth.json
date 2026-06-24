@@ -5,7 +5,7 @@
     "questions": [
         {
             "q": "hva heter den motsatte prosessen fra fotosyntese?",
-            "a": "celleånding (aka respirasjon, forbrenning)\nfotosyntese bruker solenergi til å bygge sukker og oksygen fra vann og CO2, bryter celleåndingen ned disse stoffene for å frigjøre energi, og produserer da vann og CO2"
+            "a": "celleånding (aka respirasjon, forbrenning)"
         },
         {
             "q": "Hvor i Middle Earth er Legolas fra",
@@ -25,7 +25,10 @@
         },
         {
             "q": "Hva heter vaskebjørnen i Animal Crossing som gir deg rentefrie lån",
-            "a": "Tom Nook"
+            "a": "Tom Nook",
+            "img": [
+                "data/img/fe1f16316799048b.jpg"
+            ]
         },
         {
             "q": "Hvilket spill er kjent for uttrykket “The cake is a lie”?",
@@ -48,7 +51,11 @@
             "a": "Bulbasaur"
         },
         {
-            "q": "Who’s that pokemon"
+            "q": "Who’s that pokemon",
+            "a": "Rotom",
+            "img": [
+                "data/img/7eb130c18562f70d.jpeg"
+            ]
         },
         {
             "q": "Hvilken kommando brukes for å gå ut av vim",

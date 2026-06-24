@@ -1,0 +1,31 @@
+{
+    "title": "misc",
+    "description": "",
+    "credit": "",
+    "questions": [
+        {
+            "q": "Etymologisk sett. Hvor kommer oktober fra?",
+            "a": "Latinsk octo betyr åtte"
+        },
+        {
+            "q": "Hvilke farger er i OL ringene og i hvilken rekkefølge",
+            "a": "Blå gul sort grønn rød"
+        },
+        {
+            "q": "What animal jumps over the lazy dog?",
+            "a": "fox"
+        },
+        {
+            "q": "hva heter den motsatte prosessen fra fotosyntese?",
+            "a": "celleånding (aka respirasjon, forbrenning)"
+        },
+        {
+            "q": "what’s 9+10",
+            "a": "21"
+        },
+        {
+            "q": "Hva kalles et ord som staves likt forlengs og baklengs",
+            "a": "Palindrom"
+        }
+    ]
+}

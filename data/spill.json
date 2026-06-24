@@ -4,8 +4,19 @@
     "credit": "",
     "questions": [
         {
+            "q": "Hva er neste spillet til utvikleren av Stardew Valley (Concerned Ape)",
+            "a": "Haunted Chocolatier"
+        },
+        {
+            "q": "Hvilke farger har soppen som gjør Mario gigantisk",
+            "a": "Gul og rød"
+        },
+        {
             "q": "Hva heter vaskebjørnen i Animal Crossing som gir deg rentefrie lån",
-            "a": "Tom Nook"
+            "a": "Tom Nook",
+            "img": [
+                "data/img/fe1f16316799048b.jpg"
+            ]
         },
         {
             "q": "Hvilket spill er kjent for uttrykket “The cake is a lie”?",
@@ -28,7 +39,11 @@
             "a": "Bulbasaur"
         },
         {
-            "q": "Who’s that pokemon"
+            "q": "Who’s that pokemon",
+            "a": "Rotom",
+            "img": [
+                "data/img/7eb130c18562f70d.jpeg"
+            ]
         },
         {
             "q": "Hvor mange år brukte Silksong på utvikling",

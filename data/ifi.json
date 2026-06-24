@@ -4,6 +4,10 @@
     "credit": "",
     "questions": [
         {
+            "q": "Ada, Algol, Assembler, Limbo, XML, C, Caml, Chill, Cobol, Eiffel, Euclid, Euler, Fortran, Fortress. Hva mangler?",
+            "a": "Bliss"
+        },
+        {
             "q": "Når er fristen for å betale semesteravgiften på UiO",
             "a": "1. september og 1. februar"
         }
